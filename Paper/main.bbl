@@ -1,0 +1,112 @@
+\begin{thebibliography}{11}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Bebchuk(1984)}]{Bebchuk1984}
+\bibinfo{author}{Bebchuk, L.A.}, \bibinfo{year}{1984}.
+\newblock \bibinfo{title}{Litigation and settlement under imperfect
+  information}.
+\newblock \bibinfo{journal}{The RAND Journal of Economics}
+  \bibinfo{volume}{15}, \bibinfo{pages}{404--415}.
+\newblock \DOIprefix\doi{10.2307/2555448}.
+%Type = Book
+\bibitem[{Gillman and Housman(2019)}]{gillman2019}
+\bibinfo{author}{Gillman, R.A.}, \bibinfo{author}{Housman, D.},
+  \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{Game Theory: A Modeling Approach}.
+\newblock \bibinfo{publisher}{CRC Press}, \bibinfo{address}{Boca Raton}.
+%Type = Article
+\bibitem[{Hardin(1968)}]{hardin1968tragedy}
+\bibinfo{author}{Hardin, G.}, \bibinfo{year}{1968}.
+\newblock \bibinfo{title}{The tragedy of the commons}.
+\newblock \bibinfo{journal}{Science} \bibinfo{volume}{162},
+  \bibinfo{pages}{1243--1248}.
+\newblock \DOIprefix\doi{10.1126/science.162.3859.1243}.
+%Type = Article
+\bibitem[{Machado and {de Andr{\a'e}s}(2023)}]{machado_implications_2023}
+\bibinfo{author}{Machado, J.T.M.}, \bibinfo{author}{{de Andr{\a'e}s}, M.},
+  \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{Implications of offshore wind energy developments in
+  coastal and maritime tourism and recreation areas: {An} analytical overview}.
+\newblock \bibinfo{journal}{Environmental Impact Assessment Review}
+  \bibinfo{volume}{99}.
+\newblock \DOIprefix\doi{10.1016/j.eiar.2022.106999}.
+%Type = Article
+\bibitem[{Oh et~al.(2023)Oh, Nam and Kim}]{oh_impacts_2023}
+\bibinfo{author}{Oh, C.O.}, \bibinfo{author}{Nam, J.}, \bibinfo{author}{Kim,
+  H.}, \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{The {Impacts} of {Offshore} {Wind} {Farms} on
+  {Coastal} {Tourists}’ {Behaviors} in {South} {Korea}}.
+\newblock \bibinfo{journal}{Coastal Management} \bibinfo{volume}{51},
+  \bibinfo{pages}{24 -- 41}.
+\newblock \DOIprefix\doi{10.1080/08920753.2023.2148848}.
+%Type = Book
+\bibitem[{Ostrom(2015)}]{ostrom_2015}
+\bibinfo{author}{Ostrom, E.}, \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{Governing the Commons: The Evolution of Institutions
+  for Collective Action}.
+\newblock \bibinfo{publisher}{Cambridge University Press},
+  \bibinfo{address}{Cambridge}.
+\newblock \DOIprefix\doi{10.1017/CBO9781316423936}.
+%Type = Misc
+\bibitem[{Sewage(2009)}]{sewage_guidance_2009}
+\bibinfo{author}{Sewage, S.A.}, \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{Guidance on environmental impact assessment of
+  offshore renewable energy development on surfing resources and recreation}.
+\newblock \URLprefix
+  \url{http://tethys.pnl.gov/sites/default/files/publications/Surfers\_Against\_Sewage\_2009.pdf}.
+%Type = Article
+\bibitem[{Smythe et~al.(2020)Smythe, Bidwell, Moore, Smith and
+  McCann}]{smythe_beyond_2020}
+\bibinfo{author}{Smythe, T.}, \bibinfo{author}{Bidwell, D.},
+  \bibinfo{author}{Moore, A.}, \bibinfo{author}{Smith, H.},
+  \bibinfo{author}{McCann, J.}, \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Beyond the beach: {Tradeoffs} in tourism and
+  recreation at the first offshore wind farm in the {United} {States}}.
+\newblock \bibinfo{journal}{Energy Research and Social Science}
+  \bibinfo{volume}{70}.
+\newblock \DOIprefix\doi{10.1016/j.erss.2020.101726}.
+%Type = Article
+\bibitem[{Sobhee et~al.(2017)Sobhee, Ramessur and Bhukuth}]{sobhee_game_2017}
+\bibinfo{author}{Sobhee, S.K.}, \bibinfo{author}{Ramessur, R.},
+  \bibinfo{author}{Bhukuth, A.}, \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{A game theory approach to fishers' strategic behavior
+  vis-à-vis hotel-based water sports operators – {The} case of the
+  {Balaclava} {Marine} {Park} project in {Mauritius}}.
+\newblock \bibinfo{journal}{Ocean and Coastal Management}
+  \bibinfo{volume}{149}, \bibinfo{pages}{210 -- 216}.
+\newblock \DOIprefix\doi{10.1016/j.ocecoaman.2017.06.009}.
+%Type = Article
+\bibitem[{Trandafir et~al.(2020)Trandafir, Gaur, Behanan, Uchida, Lang and
+  Miao}]{trandafir_how_2020}
+\bibinfo{author}{Trandafir, S.}, \bibinfo{author}{Gaur, V.},
+  \bibinfo{author}{Behanan, P.}, \bibinfo{author}{Uchida, E.},
+  \bibinfo{author}{Lang, C.}, \bibinfo{author}{Miao, H.}, \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{How {Are} {Tourists} {Affected} {By} {Offshore}
+  {Wind} {Turbines}? {A} {Case} {Study} {Of} {The} {First} {U}.{S}. {Offshore}
+  {Wind} {Farm}}.
+\newblock \bibinfo{journal}{Journal of Ocean and Coastal Economics}
+  \bibinfo{volume}{7}.
+\newblock \DOIprefix\doi{10.15351/2373-8456.1127}.
+%Type = Article
+\bibitem[{Voltaire and Koutchade(2020)}]{voltaire_public_2020}
+\bibinfo{author}{Voltaire, L.}, \bibinfo{author}{Koutchade, O.P.},
+  \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Public acceptance of and heterogeneity in behavioral
+  beach trip responses to offshore wind farm development in {Catalonia}
+  ({Spain})}.
+\newblock \bibinfo{journal}{Resource and Energy Economics}
+  \bibinfo{volume}{60}.
+\newblock \DOIprefix\doi{10.1016/j.reseneeco.2020.101152}.
+
+\end{thebibliography}

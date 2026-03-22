@@ -1,0 +1,140 @@
+\documentclass[final,times,authoryear]{elsarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
+
+\journal{Coastal Management}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Negotiating Offshore Wind and Surf-Tourism Interests: An Abstract Decision Model Informed by Ericeira and Peniche}
+
+\author[first]{Maureen Flores}
+\author[sec]{Geraldo Xexéo}
+\author[third]{Dayse Pastore}
+\author[third]{Diego Carvalho}
+\author[third]{Eduardo Ogasawara}
+\author[fourth]{Carlos Costa}
+\author[fourth]{Fátima Alves}
+
+\affiliation[first]{organization={University of Aveiro}, country={Portugal}}
+\affiliation[sec]{organization={Federal University of Rio de Janeiro}, country={Brazil}}
+\affiliation[third]{organization={Federal Center for Technological Education of Rio de Janeiro}, country={Brazil}}
+\affiliation[fourth]{organization={University of Aveiro}, country={Portugal}}
+
+\begin{abstract}
+This article integrates three materials into a single decision-analytic paper: a motivational and regulatory text centered on Ericeira, an abstract decision worksheet calibrated with Peniche data, and a methodological game-theory review. The paper studies the conflict between offshore wind expansion and surf-tourism interests in Portuguese coastal space. Ericeira provides the legal, territorial, and symbolic motivation because of its World Surfing Reserve status and the growing concern that offshore interventions may alter wind, seabed, and wave conditions. Peniche provides an order-of-magnitude calibration showing the economic relevance and volatility of the surf-tourism economy. We formalize the interaction as a simultaneous non-cooperative game between offshore advocates and surf-tourism contestants who choose whether to implement or resist a project through litigation and negotiation. The formulation makes explicit the role of expected project returns, perceived local losses, litigation costs, compensation, and the probability of offshore proponents prevailing. Using the baseline values from the worksheet, the model produces a conflict equilibrium: implementation remains attractive to proponents, while resistance remains rational for surf-tourism actors, even though the socially superior outcome is negotiated acceptance. This gap between Nash equilibrium and Pareto superiority highlights the need for stronger institutional representation, compensation design, and negotiation mechanisms if offshore deployment is to coexist with surf-based coastal economies.
+\end{abstract}
+
+\begin{keyword}
+offshore wind \sep surfing \sep coastal tourism \sep game theory \sep negotiation \sep Portugal
+\end{keyword}
+
+\end{frontmatter}
+
+\section{Introduction}
+\label{sec_introduction}
+
+Offshore wind is becoming a central pillar of Portuguese decarbonization policy, while surfing and tourism remain major components of the blue economy. This creates a distributive and strategic problem in coastal regions where renewable-energy ambitions overlap with places whose economic value depends on wave quality, landscape, recreation, and coastal identity. The literature already shows that offshore wind developments can affect tourism preferences and recreational behavior, although results are context-sensitive and mediated by landscape perception, project design, and the type of activity under analysis \citep{machado_implications_2023,oh_impacts_2023,trandafir_how_2020,voltaire_public_2020,smythe_beyond_2020}. For surfing in particular, the concern is sharper because the asset under dispute is not only visual amenity but the quality and regularity of the wave resource itself \citep{sewage_guidance_2009}.
+
+The Portuguese debate is therefore not merely technological. It is institutional and territorial. The public discussion around the Allocation Plan for offshore renewables has already shown that fishing tends to enter negotiations with a well-defined vocabulary of claims: spatial relocation, protection of productive grounds, and compensatory measures. Surfing and tourism, despite their substantial contribution to local economies, have entered the debate with lower institutional density and less explicit bargaining structure. The central question of this article is how to formulate that bargaining problem in a way that is analytically clear and empirically anchored.
+
+We integrate three complementary sources. First, the Ericeira background document provides the motivation, the regulatory context, and the specific concern that offshore interventions may affect surf conditions and surfing events. Second, the worksheet \textit{Dados Peniche.xlsx}, especially the tab ``Problema de Decisão Abstrato'', supplies a compact mathematical structure and a calibrated baseline for the dispute. Third, the support project \textit{Propostas para o novo artigo e Revisão do Artigo de Game Theory Offshore} contributes the methodological bridge to normal-form games, Nash equilibrium, Pareto comparisons, litigation models, and the role of incentives and sanctions in shifting strategic outcomes. The result is a single article in which Ericeira motivates the case, Peniche calibrates the magnitudes, and game theory explains the strategic logic.
+
+\section{Context: Ericeira, Regulation, and the Portuguese Blue Economy}
+\label{sec_context}
+
+The environmental and regulatory motivation begins with Portugal's commitment to carbon neutrality and the acceleration of renewable energy under European and national policy agendas. In this setting, offshore wind is expected to occupy maritime space that is already contested by fishing, tourism, recreation, and sports. The Directorate-General for Natural Resources, Safety and Maritime Services (DGRM) has advanced planning instruments for allocating maritime space, and the resulting public-hearing process has become the arena in which sectors defend their claims.
+
+The Ericeira case is especially useful because it makes visible a category of coastal value that is often weakly represented in impact studies. Ericeira became a World Surfing Reserve in 2011 due to the quality of its waves, ecological importance, and concentration of world-class surf breaks. Surfing has since become a defining component of the area's territorial identity and local economy, helping expand accommodation, food services, surf schools, surf camps, and event-based visitation. The municipal planning framework reinforced this relevance in the coastal management plan by recognizing the need to protect waves of special value for board sports and the underwater beach conditions that sustain them.
+
+At the same time, the tourism and sports sectors appear structurally underrepresented in offshore-wind negotiations. The background document emphasizes that tourism is highly significant in national value added and employment, yet sports are often absorbed into tourism statistics and consequently lose analytical visibility. This underrepresentation matters because the key damages feared by the surf sector are not exhausted by standard tourist-landscape metrics. They include possible changes in wave behavior, wind exposure, seabed morphology, and the feasibility of holding surfing events. Decree-Law No.\ 140/99 is relevant here because it frames compensatory measures as instruments meant to preserve ecological coherence when impacts cannot be avoided, which opens space for negotiation but does not by itself specify how surf-related losses should be valued.
+
+The Ericeira material also highlights three practical lessons drawn from the more established participation of fishing in maritime conflicts: institutional representation matters, demands for relocation or redesign must be technically arguable, and compensation only becomes negotiable when the affected sector can define losses in a way that is legible to the decision process. Those three elements directly motivate the formal model developed in this paper.
+
+\section{Peniche as an Order-of-Magnitude Calibration}
+\label{sec_peniche}
+
+Although the motivational narrative is centered on Ericeira, the worksheet used to formalize the problem is calibrated with Peniche data. This is useful because Peniche is also a surf-tourism municipality with a strong tourism profile, allowing us to attach plausible orders of magnitude to the abstract decision problem. The worksheet combines tourism-series information with a stylized conflict matrix in which the offshore side has higher expected returns than the local surf-tourism side, while the latter still has rational incentives to contest the project.
+
+Table \ref{tab:peniche_series} summarizes the Peniche indicators that are most directly connected to the size and volatility of the local visitor economy. They show a pre-pandemic expansion, a sharp contraction in 2020, and a strong rebound by 2022. This pattern matters because it demonstrates both the relevance and the fragility of local tourism income when exposed to external shocks, reinforcing why stakeholders may be sensitive to new offshore risks.
+
+\begin{table}[H]
+\centering
+\caption{Selected Peniche tourism indicators used as order-of-magnitude reference.}
+\label{tab:peniche_series}
+\begin{tabular}{lccc}
+\toprule
+Indicator & Initial year/value & Shock year/value & Latest year/value \\
+\midrule
+Accommodation capacity & 2014: 1,030 & 2020: 1,560 & 2021: 1,979 \\
+Overnight stays & 2016: 177,898 & 2020: 110,202 & 2022: 238,388 \\
+Guests & 2016: 86,633 & 2020: 52,816 & 2022: 109,809 \\
+Tourism income (\euro) & 2016: 8.145 M & 2020: 6.106 M & 2022: 13.638 M \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Between 2016 and 2019, tourism income in Peniche grew by about 53\%, then fell by roughly 51\% in 2020, before recovering to a level about 9\% above 2019 by 2022. Over the same period, average income per guest increased from approximately \euro94.0 to \euro124.2, and average income per overnight stay rose from roughly \euro45.8 to \euro57.2. Even without claiming that Ericeira and Peniche are identical, these figures are enough to justify a model in which surf-tourism actors perceive meaningful losses if offshore interventions degrade the conditions that attract surfers and associated visitors.
+
+\input{Game theoretic Model}
+
+\section{Methods}
+\label{sec_methods}
+
+The methodological strategy has four layers. First, we consolidated the motivational and regulatory narrative from the Ericeira document into the article's introduction and case framing. Second, we translated the spreadsheet into an explicit and internally consistent payoff structure, preserving the original variables and baseline values while correcting notation and sign conventions where necessary. Third, we used the game-theory support material to connect the model to the broader literature on normal-form games, Nash equilibrium, Pareto comparisons, tragedy-of-the-commons reasoning, and litigation under uncertainty \citep{Bebchuk1984,gillman2019,hardin1968tragedy,ostrom_2015,sobhee_game_2017}. Fourth, we generated a reproducible R workflow that reads the Peniche worksheet, reconstructs the payoff matrix, computes equilibrium conditions, and prepares exploratory sensitivity analyses for the main policy parameters.
+
+The exploratory analysis is intentionally simple and transparent. Rather than pretending to estimate structural behavioral parameters from a single worksheet, the R workflow treats the sheet as a calibrated decision template. It therefore performs one-at-a-time and grid-based sensitivity analysis on the variables that are substantively meaningful in negotiation: expected offshore return ($R$), offshore loss or concession ($LR$), litigation costs ($C_s$ and $C_a$), expected local loss ($L$), compensation ($G$), and the probability that offshore proponents prevail in dispute ($P$). This design keeps the empirical exercise aligned with the purpose of the model: to clarify the strategic conditions under which local actors accept, resist, or negotiate.
+
+\section{Exploratory Analysis and Interpretation}
+\label{sec_evaluation}
+
+Using the baseline values in the worksheet ($R=100$, $LR=20$, $C_s=3$, $I=10$, $L=3$, $\alpha=0$, $C_a=3$, $G=4$, and $P=0.5$), the expected conflict payoff for the offshore proponents is $G_1=35$, while the expected conflict payoff for surf-tourism actors is $G_2=7.5$. Table \ref{tab:baseline_payoff} reports the resulting payoff matrix.
+
+\begin{table}[H]
+\centering
+\caption{Baseline payoff matrix calibrated from the worksheet.}
+\label{tab:baseline_payoff}
+\begin{tabular}{lcc}
+\toprule
+ & Accept & Fight \\
+\midrule
+Implement & $(100, 7)$ & $(35, 7.5)$ \\
+Withdraw & $(0, 10)$ & $(0, 10)$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Three implications follow. First, implementation remains individually rational for the offshore side because the expected return under conflict is still positive and far above withdrawal. Second, once implementation is expected, resistance is individually rational for surf-tourism actors because the expected value of fighting slightly exceeds simple acceptance. Third, the strategically stable result is inferior to the socially best outcome: the sum of payoffs is highest in the ``Implement/Accept'' cell, but the incentive structure pushes the parties toward ``Implement/Fight''. In that sense, the worksheet reproduces a credible negotiation problem rather than a harmonious partnership.
+
+This gap between equilibrium and collective value also helps reinterpret the methodological lessons extracted from the background game-theory review. Strategic outcomes may be shifted either by lowering the attractiveness of conflict or by increasing the value of negotiated coexistence. In the present model, that means increasing compensation $G$ only helps if it is designed together with legal and institutional arrangements that reduce the need to litigate. Otherwise, compensation can paradoxically make resistance more attractive because it increases what opponents expect to retain even if they lose. By contrast, lowering the effective cost asymmetry of negotiation, clarifying technical relocation options, and strengthening representational capacity may move the game closer to an agreement outcome.
+
+The Peniche data reinforce the interpretation that local actors are not overreacting if they resist. A municipality with millions of euros in tourism receipts, increasing accommodation capacity, and strong visitor recovery after a major shock has reasonable grounds to contest new risks to a wave-dependent local economy. The Ericeira narrative then adds the institutional dimension: where the wave resource is part of a protected territorial identity and a recognized surf reserve, the pressure for technical justification and compensatory measures should be even stronger.
+
+\section{Conclusion}
+\label{sec_conclusion}
+
+This integrated article shows that the conflict between offshore wind expansion and surf-tourism interests can be expressed as a tractable decision problem without sacrificing the territorial richness of the Portuguese case. Ericeira supplies the legal and socio-spatial motivation, Peniche supplies the magnitude of the tourism economy, and the game-theory framework explains why conflict may persist even when an agreement would be collectively better.
+
+The baseline calibration points to a clear policy implication. If public authorities want offshore deployment to coexist with surf-based local economies, they cannot rely on generic consultation alone. They need institutions that make the surf sector visible, technical procedures that allow redesign and relocation claims to be tested, and compensation arrangements that are connected to measurable local losses. Future work can extend the model in three directions already suggested by the support materials: sequential bargaining, repeated interaction with reputation effects, and policy scenarios that compare sanctions with positive incentives for cooperation.
+
+\section*{Acknowledgements}
+
+The article integrates materials prepared in the broader research effort on offshore wind, surfing, tourism, and game theory in Portugal and Brazil.
+
+\bibliographystyle{elsarticle-harv}
+\bibliography{references}
+
+\end{document}

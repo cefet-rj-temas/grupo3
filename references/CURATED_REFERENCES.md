@@ -1,0 +1,49 @@
+# Curated References
+
+- `Artigos classificados por tipos/Surfing Resources and Offshore Wind Farm.url`: direct surf-offshore link.
+- `Artigos classificados por tipos/Comunidade, opiniao, aceitacao/Deep waters Lessons from community meetings about offshore wind.pdf`: community acceptance and meeting dynamics.
+- `Artigos classificados por tipos/Comunidade, opiniao, aceitacao/Seeing clearly in a virtual reality Tourist reactions to an offshore wind.pdf`: tourist perception of offshore wind.
+- `Artigos classificados por tipos/Comunidade, opiniao, aceitacao/The Offshore Wind Power Debate_ - Sandra F. Watts.pdf`: public debate and coastal views.
+- `Artigos classificados por tipos/Impacto Economico/(MODEL) Valuation of ecological and amenity impacts of an offshore windfarm1-s2.0-S1462901115300034-main.pdf`: economic valuation and amenity impacts.
+- `Artigos classificados por tipos/Impacto Economico/Assessing the Impact of Offshore Wind Power Deployment in Fisheries .pdf`: competing maritime use and fisheries conflict.
+- `Artigos classificados por tipos/Impacto Economico/overview of the effects of offshore wind farms on-gp_daily_WEB_EA0221387ENN_002.pdf`: broad effects overview for maritime sectors.
+- `Artigos classificados por tipos/Impacto Economico/SETTING THE CONTEXT FOR OFFSHORE WIND FISHERIES.pdf`: context on fisheries interactions.
+- `Artigos classificados por tipos/Impacto Fisico ou Ecosistema/Assessment of the Significance of Changes to the onshore waves AE1227_4775_FRP.pdf`: wave significance assessment.
+- `Artigos classificados por tipos/Impacto Fisico ou Ecosistema/Impact of an offshore wind farm on wave conditions and shoreline development ICCE2014_7934_paper_for_proceedings_ver2.pdf`: wave and shoreline effects.
+- `Artigos classificados por tipos/Impacto Fisico ou Ecosistema/Potential_Effects_of_Offshore_Wind_Developments_on_Coastal_Processes.pdf`: coastal process impacts.
+- `Artigos classificados por tipos/Impacto Fisico ou Ecosistema/Simulation of Wave Damping Near Coast due to Offshore Wind Farms alari2012.pdf`: wave damping near coast.
+- `Artigos classificados por tipos/Impacto Fisico ou Ecosistema/Towards understanding environmental and cumulative impacts of floating1-s2.0-S0964569123002971-main.pdf`: review on floating wind cumulative impacts.
+- `Artigos classificados por tipos/Informações Importantes, Praticas, Regulamentos/(ATENÇÃO) Obligations and aspirations A critical evaluation of offshore wind farm1-s2.0-S136403211731225X-main.pdf`: critical evaluation of cumulative impact assessment.
+- `Artigos classificados por tipos/Informações Importantes, Praticas, Regulamentos/(VER) Fit-for-Purpose Information for Offshore Wind Farming jmse-11-01630.pdf`: information needs for offshore wind applications.
+- `Artigos classificados por tipos/Informações Importantes, Praticas, Regulamentos/(VER) Fit-for-Purpose Information for Offshore Wind Farming PART II jmse-11-01817-v3.pdf`: gap analysis and recommendations.
+- `Artigos classificados por tipos/Relatorios ou estudos de projetos específicos/Economic valuation of an offshore wind farm in Greece The role-s2.0-S1364032115008254-main.pdf`: economic valuation of offshore wind.
+- `Artigos classificados por tipos/Relatorios ou estudos de projetos específicos/OSPAR p00385e_wind-farms impact_assessment_final.pdf`: authoritative environmental assessment reference.
+- `Artigos classificados por tipos/Relatorios ou estudos de projetos específicos/Relatorio__Subgrupo1_Objetivo a)_9002.pdf`: Portuguese planning and siting context.
+- `Artigos classificados por tipos/Teoria dos Jogos/Complex Model with cost GOOD Litigation and Settlement Under - Unknown.pdf`: litigation under imperfect information.
+- `Artigos classificados por tipos/Teoria dos Jogos em Litigation ou similar/Litigation cap do Handbook of Law and Economics spier2007.pdf`: litigation handbook chapter.
+- `avaliar/Public opinion and the environmental, economic and aesthetic.pdf`: public opinion and impacts.
+- `avaliar/Recreational use of offshore wind farms Experiences and opinions of sea.pdf`: recreational use conflicts.
+- `avaliar/The impact of offshore wind farms on beach recreation demand Policy.pdf`: beach recreation demand.
+- `Documents/Concelho - Peniche.pdf`: municipal indicators for Peniche.
+- `Documents/Economia do mar mais dinâmica do que a economia nacional no triénio 2016-2018.pdf`: blue economy context in Portugal.
+- `Documents/governance surf break.pdf`: surf governance theory.
+- `Documents/Matosinhos.pdf`: Portuguese relocation and negotiation example.
+- `Documents/Paying the price to solve fisheries conflicts in Brazil Marine Protected Areas.pdf`: compensation/conflict management parallel.
+- `Documents/Quadros_CSM_2016_2018_PT.xlsx`: supporting data for sea economy.
+- `Impactos Economicos de Offshore Wind Farms no Turismo/(ATENÇÂO) Implications of offshore wind energy developments in coastal and maritime.pdf`: core tourism and recreation overview.
+- `Impactos Economicos de Offshore Wind Farms no Turismo/Beyond the beach Tradeoffs in tourism and recreation at the first offshore.pdf`: tourism and recreation tradeoffs.
+- `Impactos Economicos de Offshore Wind Farms no Turismo/Block Island Wind Farm Impacts on Tourism.pdf`: Block Island tourism case.
+- `Impactos Economicos de Offshore Wind Farms no Turismo/Public acceptance of and heterogeneity in behavioral beach.pdf`: behavioral beach response.
+- `Impactos Economicos de Offshore Wind Farms no Turismo/The Impacts of Offshore Wind Farms on Coastal Tourists  Behaviors in South Korea.pdf`: tourist behavior case study.
+- `MAIS IMPORTANTES/A game theory approach to fishers strategic behavior vis-a-vis hotelbased water sports operators e The case of the Balaclava Marine Park project in Mauritius.pdf`: core game-theory reference.
+- `MAIS IMPORTANTES/Guidance on environmental impact assessment of offshore renewable on SURFING .pdf`: core surfing impact guidance.
+- `Textos de 11 marcos 2024/20230531-GTOffshore_RelatorioFinal_vfinal.pdf`: Portuguese offshore planning report.
+- `Textos de 11 marcos 2024/D5.1-Analise-SocioEconomica-Desenvolvimento-Disseminacao-Tecnologias-Renovaveis-Offshore.pdf`: socioeconomic offshore report.
+- `Textos de 11 marcos 2024/pwc-impacto-economico-energias-renovaveis-offshore.pdf`: economic impact report Portugal.
+- `Textos de 11 marcos 2024/ulfc125363_tm_Hanna_Rybchynska.pdf`: Portuguese offshore planning dissertation.
+- `Textos especificos Surfe Turismo em Peniche/2013.04.003_.pdf`: surf tourism in Peniche.
+- `Textos especificos Surfe Turismo em Peniche/artigo jornal 400 milhes.pdf`: economic value of surf in Portugal.
+- `Textos especificos Surfe Turismo em Peniche/Dissertação o valor das ondas e do surf na Economia Portuguesa.pdf`: economic value of surf and waves.
+- `Textos especificos Surfe Turismo em Peniche/mundial_surf_22_março_2016_Diario_noticias.pdf`: Peniche world surf economic impact press evidence.
+- `Textos especificos Surfe Turismo em Peniche/Neves_Pedro_TM_2021.pdf`: local surf economy Peniche.
+- `Textos especificos Surfe Turismo em Peniche/Peniche_ Mundial de Surf representa ‘elemento-chave’ na economia local - Gazeta das Caldas.pdf`: local economic importance of world surf event.

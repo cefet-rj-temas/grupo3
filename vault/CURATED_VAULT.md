@@ -1,0 +1,22 @@
+# Curated Vault
+
+- `Artigos classificados por tipos/Impacto Economico/(ATENÇÃO MODELO) The Game of Guwarra A game theory-based decision-making framework.pdf`: site selection model not focused on surf-tourism conflict.
+- `Artigos classificados por tipos/Impacto Economico/Implications of offshore wind energy developments in coastal and maritime tourism and recreation areas an analytical overview.pdf`: duplicate of kept tourism overview.
+- `Artigos classificados por tipos/Impacto Fisico ou Ecosistema/(ATENÇÃO) Large Scale Impact of Wind Farms.pdf`: too broad and indirect for current question.
+- `Artigos classificados por tipos/Impacto Fisico ou Ecosistema/(REVIEW) The Effects of Offshore Wind Farms on fishes 33-4_van-berkel.pdf`: fish-focused review not central to surf-tourism paper.
+- `Artigos classificados por tipos/Impacto Fisico ou Ecosistema/Christensen2014_ImpactOffshoreWindfarm.pdf`: duplicate of kept shoreline/wave paper.
+- `Artigos classificados por tipos/Impacto Fisico ou Ecosistema/Critical evaluation of ecosystem changes from an offshore wind farm.pdf`: natural capital framing not used in current article.
+- `Artigos classificados por tipos/Impacto Fisico ou Ecosistema/Offshore wind farms are projected to impact s43247-022-00625-0.pdf`: ecosystem productivity focus too indirect.
+- `Artigos classificados por tipos/Impacto Fisico ou Ecosistema/Surface Impact Golbazi_2022_Environ._Res._Lett._17_064021.pdf`: surface-impact focus too broad for article scope.
+- `Artigos classificados por tipos/Impacto Fisico ou Ecosistema/WAVE ENERGY Coastal Process Impact Assessment in relation to Offshore Wave Energy Development S0811.pdf`: wave energy rather than offshore wind.
+- `Artigos classificados por tipos/Informações Importantes, Praticas, Regulamentos/2022-02-14_Ibama_Term-of-Reference-Offshore_wind_farms.pdf`: Brazilian TOR outside primary Portugal scope.
+- `Artigos classificados por tipos/Relatorios ou estudos de projetos específicos/Anexo 49.pdf`: duplicate of same file kept from another folder.
+- `Artigos classificados por tipos/Relatorios ou estudos de projetos específicos/Environmental_Statement.pdf`: project-specific EIA not needed after broader references selected.
+- `Artigos classificados por tipos/Teoria dos Jogos/Fight or Flight_ - Cary Deck.pdf`: not directly about litigation or maritime conflict.
+- `Artigos classificados por tipos/Teoria dos Jogos/Settle First Settle Second aproach A Game Theoretic Analysis of Co - John Cirace.pdf`: antitrust-specific and too distant from case.
+- `Documents/Contexto_ CEFET.docx`: internal drafting note already superseded.
+- `Documents/Economia do mar mais dinâmica do que a economia nacional no triénio 2016-2018.txt`: URL helper duplicated by kept PDF.
+- `Documents/Objetivo.pptx`: presentation draft not needed.
+- `Documents/Quadros_CSM_2018_2018_PT.zip`: compressed duplicate/helper archive.
+- `Textos de 11 marcos 2024/Anexo 49.pdf`: duplicate of same technical study.
+- `Textos especificos Surfe Turismo em Peniche/Uma nova era na economia do surf.pdf`: opinion piece not needed in current evidence base.

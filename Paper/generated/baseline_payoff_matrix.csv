@@ -1,0 +1,5 @@
+"offshore_action","surf_action","offshore_payoff","surf_payoff","total_payoff","better_for_offshore","better_for_surf","is_nash","is_pareto_max"
+"Implement","Accept",100,7,107,TRUE,FALSE,FALSE,TRUE
+"Implement","Fight",35,7.5,42.5,TRUE,TRUE,TRUE,FALSE
+"Withdraw","Accept",0,10,10,FALSE,TRUE,FALSE,FALSE
+"Withdraw","Fight",0,10,10,FALSE,TRUE,FALSE,FALSE

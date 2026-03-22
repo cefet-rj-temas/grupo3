@@ -1,0 +1,48 @@
+Problema de Decisão Abstrato			Analisar a ordem de grandeza
+
+
+	Offshore			Tipo	Importância	Fórmula		Resultados
+	R	100	Retorno esperado do projeto offshore (result)	Entrada	Alta				Surfe
+	LR	20	Perdas no projeto da offshore se perder ou ganhar	Entrada	Alta				Aceita		Luta
+	Cs	3	Custo de Lutar para a offshore (cost to support entry)	Entrada	Alta
+	-G	=a_G	Compensação paga ao surfe	Calculada	?	<openpyxl.worksheet.formula.ArrayFormula object at 0x00000164B37AF4D0>
+
+	Surfe
+	I	10	Renda atual turismo/surfe (income)	Entrada	Alta				Resultados		Resultados
+	L	3	Perdas no turismo/surfe com a entrada do offshore (loss)	Entrada	Alta				Offshore	Surfe	Offshore	Surfe
+	alpha	0	Fator de redução nos custos de luta do opositor se a offshore desiste	Entrada	Baixa			Implementa	=a_R	=a_I-a_L	=G1_	=G2_
+	Ca	3	Custo de Lutar/Opositor (cost of action)	Entrada	Alta			Desiste	0	=a_I	0	=a_I-a_Ca*a_alpha
+	G	4	Compensação  paga para surfe para fazer offshore	Entrada	Alta
+
+	Gerais
+	P	0.5	Probabilidade de Offshore ganhar o processo	Entrada	Alta
+	(1-P)	=1-C18	Probabilidade de Opositor ganhar o processo	Calculado		1-P			Opositores
+									Aceita		Luta
+
+	Em caso de oposição, resultados da offshore								Pro	Contra	Pro	Contra
+	G1V	=a_R-a_LR-a_Cs-a_G	Ganhos da Offshore se Offshore ganhar	Calculado	Média	R-LR-Cs-G
+	G1D	=-a_Cs	Ganhos (negativos) da Offshore se ela perder	Calculado	Média	Cs
+	G1VP	=a_P*C23	Probabilidade de ganhar X Ganhos da Offshore se Offshore ganhar	Calculado	Média	P*G1V		Implementa	R	I-L	G1	G2
+	G1DP	=a_P_m1*C24	Probabilidade de perder X Ganhos (negativos) da Offshore se ela perder	Calculado	Média	(1-P)*G1D		Desiste	0	I	0	0,I-alphaCa				Cells
+	G1	=SUM(C25:C26)	Resultado em caso de Implementar com Luta	Calculado	Alta
+
+	Em caso de oposição, resultados do opositor
+	G2V	=(a_I-a_Ca)	Ganhos do opositor, se o opositor ganhar	Calculado	Média	I-Ca										1	2
+	G2D	=a_I-a_L+a_G-a_Ca	Ganhos do opositor, se o opositor perder	Calculado	Média	I+G-L-Ca										3	4
+	G2VP	=a_P_m1*C30	Probabilidade de ganhar X Ganhos do opositor, se o opositor ganhar	Calculado	Média	P*G2V
+	G2DP	=a_P*C31	Probabilidade de perder X Ganhos do opositor, se o opositor perder	Calculado	Média	(1-P)*G2D
+	G2	=SUM(C32:C33)	Resultado em caso de Lutar 	Calculado	Alta
+
+								Máximo de Pareto
+									Opositores
+	Primeira casa é um equilíbrio de Nash								Aceita		Luta				1	=SUM(J40:K40)	=RANK(Q38,$Q$38:$Q$41)
+	2.13	=IF(a_R>=0,TRUE,FALSE)	R>0	Olhar a equação					Pro	Contra	Pro	Contra			2	=SUM(L40:M40)	=RANK(Q39,$Q$38:$Q$41)
+	2.14	=(2*a_Ca)>=(a_LR+a_L)	2Ca<L+LR	Olhar a equação				Implementa	=$C$5	=$C$11-$C$12	=$C$25+$C$26	=$C$30+$C$31			3	=SUM(J41:K41)	=RANK(Q40,$Q$38:$Q$41)
+								Desiste	0	=a_I	0	=$C$11-$C$13*$C$14			4	=SUM(L41:M41)	=RANK(Q41,$Q$38:$Q$41)
+	Segunda casa é um equilíbrio de Nash
+	2.17	=(a_R-a_LR)>(2*a_Cs)	R-LR>2*Cs	Olhar a equação				Equilíbrio de Nash
+	2.18	=(2*a_Ca)<=(a_L+a_LR)	L+LR>2*Ca	Olhar a equação					Opositores						Lin/Col	Melhor Off	Melhor Op	Cell
+									Aceita		Luta				1	=IF(AND(J47>=Q46,L47>=L48),1,0)	=IF(AND(K47>=M47,K48>=M48),1,0)	1	=IF(AND(R45,Q45),1,0)
+									Pro	Contra	Pro	Contra			2	=IF(AND(J48>=J47,L48>=L47),1,0)	=IF(AND(M47>=K47,M48>=K48),1,0)	2	=IF(AND(Q45,R46),1,0)
+								Implementa	=$C$5	=$C$11-$C$12	=$C$25+$C$26	=$C$30+$C$31						3	=IF(AND(Q46,R45),1,0)
+								Desiste	0	=a_I	0	=$C$11-$C$13*$C$14						4	=IF(AND(Q46,R46),1,0)
