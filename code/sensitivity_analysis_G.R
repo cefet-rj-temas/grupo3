@@ -53,6 +53,7 @@ P  <- as.numeric(readline("Digite a Probabilidade fixa (P) [0 a 1]: "))
 
 # Implementação do RANGE para G
 # Testando de 0 até 1.5x o valor da perda L para encontrar o ponto de virada
+# Utliza-se 20 valores igualmente espaçados 
 g_range <- seq(0, L * 1.5, length.out = 20)
 
 cat("\nExecutando análise para G variando de 0 a", max(g_range), "...\n")
@@ -68,8 +69,8 @@ print(mapa_sensibilidade_G %>% select(G_scenario, offshore_action, surf_action))
 p_range_grafico <- seq(0, L * 1.5, length.out = 100)
 dados_plot <- tibble(G = p_range_grafico) %>%
   mutate(
-    Accept = I - L + G, # O Surf ganha a renda menos a perda mais a compensação
-    Fight  = (1 - P) * (I - Ca) + P * (I - L + G - Ca) # Expectativa judicial g2
+    Accept = I - L ,
+    Fight  = (1 - P) * (I - Ca) + P * (I - L + G - Ca)
   )
 
 ggplot(dados_plot, aes(x = G)) +
