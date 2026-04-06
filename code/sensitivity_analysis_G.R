@@ -70,13 +70,18 @@ p_range_grafico <- seq(0, L * 1.5, length.out = 100)
 dados_plot <- tibble(G = p_range_grafico) %>%
   mutate(
     Accept = I - L ,
-    Fight  = (1 - P) * (I - Ca) + P * (I - L + G - Ca)
+    Fight  = (1 - P) * (I - Ca) + P * (I - L + G - Ca),
+    Fight_plot = ifelse(Fight >= Accept, Fight, NA)
   )
 
+G_point <- ( (I - L) - (I - Ca) + P * Ca ) / P
+
 ggplot(dados_plot, aes(x = G)) +
-  geom_line(aes(y = Accept, color = "Acordo (G)"), size = 1) +
-  geom_line(aes(y = Fight, color = "Luta (Expectativa)"), linetype = "dashed", size = 1) +
-  labs(title = paste("Sensibilidade de G para P =", P),
-       x = "Valor da Compensação (G)", y = "Payoff do Surf", color = "Decisão") +
+  geom_line(aes(y = Accept, color = "Acordo"), linewidth = 1) +
+  geom_line(aes(y = Fight, color = "Luta"), linewidth = 1) +
+  geom_point(aes(x = G_point, y = I - L), size = 2) +
+  annotate("text", x = G_point, y = I - L + 0.2, label = "Ponto de mudança", hjust = 1) +
+  labs(title = paste("Análise de sensibilidade de G para P =", P),
+       x = "Compensação (G)", y = "Payoff Surf", color = "Decisão") +
   theme_minimal()
 
