@@ -74,14 +74,48 @@ dados_plot <- tibble(G = p_range_grafico) %>%
     Fight_plot = ifelse(Fight >= Accept, Fight, NA)
   )
 
-G_point <- ( (I - L) - (I - Ca) + P * Ca ) / P
+# Cálculo corrigido do Ponto de Mudança
+G_point <- (Ca - L * (1 - P)) / P
 
-ggplot(dados_plot, aes(x = G)) +
-  geom_line(aes(y = Accept, color = "Acordo"), linewidth = 1) +
-  geom_line(aes(y = Fight, color = "Luta"), linewidth = 1) +
-  geom_point(aes(x = G_point, y = I - L), size = 2) +
-  annotate("text", x = G_point, y = I - L + 0.2, label = "Ponto de mudança", hjust = 1) +
-  labs(title = paste("Análise de sensibilidade de G para P =", P),
-       x = "Compensação (G)", y = "Payoff Surf", color = "Decisão") +
-  theme_minimal()
+# 1. Criação do Gráfico Base (apenas linhas, eixos e tema)
+grafico_base <- ggplot(dados_plot, aes(x = G)) +
+  geom_line(aes(y = Accept, color = "Acordo", linetype = "Acordo"), linewidth = 1) +
+  geom_line(aes(y = Fight, color = "Luta", linetype = "Luta"), linewidth = 1) +
+  
+  scale_color_manual(values = c("Acordo" = "black", "Luta" = "gray40")) +
+  scale_linetype_manual(values = c("Acordo" = "dashed", "Luta" = "solid")) +
+  
+  labs(
+    title = paste("Análise de Sensibilidade da Compensação (G) para P =", P),
+    x = "Compensação (G)", 
+    y = "Payoff do Surf", 
+    color = "Decisão",
+    linetype = "Decisão" 
+  ) +
+  
+  theme_bw(base_size = 12, base_family = "serif") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 14),
+    legend.position = "bottom", 
+    legend.title = element_text(face = "bold"),
+    legend.background = element_rect(color = "black", linewidth = 0.3),
+    panel.grid.minor = element_blank(), 
+    panel.grid.major = element_line(color = "gray90") 
+  )
+
+# 2. Adição Condicional do Ponto de Mudança
+# Só adiciona o ponto e a anotação se G_point for positivo ou zero
+if (!is.na(G_point) && G_point >= 0) {
+  grafico_final <- grafico_base +
+    geom_point(aes(x = G_point, y = I - L), size = 3, shape = 21, fill = "white", color = "black", stroke = 1) +
+    annotate("text", x = G_point + (max(g_range) * 0.02), y = I - L, 
+             label = "Ponto de mudança", hjust = 0, vjust = -1, family = "serif", size = 4)
+} else {
+  # Se G_point for negativo, mantém apenas o gráfico base
+  grafico_final <- grafico_base
+  cat("\n[Nota] O Ponto de Mudança é negativo (G =", round(G_point, 2), "). Uma estratégia domina a outra.\n")
+}
+
+# 3. Exibir o gráfico
+print(grafico_final)
 
