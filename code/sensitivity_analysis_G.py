@@ -34,7 +34,18 @@ def compute_payoffs(R, LR, Cs, I, L, alpha, Ca, G, P):
     # Nash Equilibrium occurs when NO player has an incentive to unilaterally deviate
     matrix_tbl['is_nash'] = matrix_tbl['better_for_offshore'] & matrix_tbl['better_for_surf']
 
-    return matrix_tbl[matrix_tbl['is_nash'] == True]
+    # Record input parameters for full traceability
+    matrix_tbl['R'] = R
+    matrix_tbl['LR'] = LR
+    matrix_tbl['Cs'] = Cs
+    matrix_tbl['I'] = I
+    matrix_tbl['L'] = L
+    matrix_tbl['alpha'] = alpha
+    matrix_tbl['Ca'] = Ca
+    matrix_tbl['P'] = P
+
+    # Return full matrix for traceability
+    return matrix_tbl
 
 def main():
     print("--- Compensation Sensitivity Analysis Configuration (G) ---")
@@ -60,7 +71,14 @@ def main():
     )
 
     print("\n--- Reality Check: G Sensitivity ---")
-    print(mapa_sensibilidade_G[['G_scenario', 'offshore_action', 'surf_action']])
+    # Filter for display purposes to show only Nash Equilibria
+    nash_equilibria = mapa_sensibilidade_G[mapa_sensibilidade_G['is_nash'] == True]
+    print(nash_equilibria[['G_scenario', 'offshore_action', 'surf_action']])
+
+    # Export full traceability to CSV
+    csv_filename = "traceability_sensitivity_G.csv"
+    mapa_sensibilidade_G.to_csv(csv_filename, index=False)
+    print(f"\n[Info] Full traceability data saved to {csv_filename}")
 
     # Preparation for Plotting
     # We use numpy.linspace with 100 points to ensure the plot lines are smooth

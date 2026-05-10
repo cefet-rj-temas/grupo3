@@ -35,15 +35,30 @@ def get_nash_equilibrium(R, LR, Cs, I, L, alpha, Ca, G, P):
 
     # Intersection of best responses defines the Nash Equilibrium
     is_nash = [o and s for o, s in zip(better_for_offshore, better_for_surf)]
-    nash_cenario = matrix_tbl[is_nash]
+    matrix_tbl['is_nash'] = is_nash
+    
+    # Record input parameters for full traceability
+    matrix_tbl['R'] = R
+    matrix_tbl['LR'] = LR
+    matrix_tbl['Cs'] = Cs
+    matrix_tbl['I'] = I
+    matrix_tbl['L'] = L
+    matrix_tbl['alpha'] = alpha
+    matrix_tbl['Ca'] = Ca
+    matrix_tbl['G_scenario'] = G
+    matrix_tbl['P_scenario'] = P
+
+    nash_cenario = matrix_tbl[matrix_tbl['is_nash']]
 
     # Verification of existence of Equilibrium in Pure Strategies
     if nash_cenario.empty:
-        return "Absence of Pure Equilibrium"
+        eq_string = "Absence of Pure Equilibrium"
     else:
         # Select the first occurrence in case of multiplicity
-        nash_cenario = nash_cenario.iloc[0] 
-        return f"{nash_cenario['offshore_action']} / {nash_cenario['surf_action']}"
+        nash_row = nash_cenario.iloc[0] 
+        eq_string = f"{nash_row['offshore_action']} / {nash_row['surf_action']}"
+        
+    return matrix_tbl, eq_string
 
 def main():
     print("--- 2D Model Parameters (P vs G) ---")
@@ -68,11 +83,19 @@ def main():
 
     # Batch computational evaluation: apply the equilibrium function over the parametric space matrix
     equilibria = []
+    all_matrices = []
     for P_val, G_val in grade_cenarios:
-        eq = get_nash_equilibrium(R, LR, Cs, I, L, alpha, Ca, G_val, P_val)
+        matrix, eq = get_nash_equilibrium(R, LR, Cs, I, L, alpha, Ca, G_val, P_val)
         equilibria.append({'P': P_val, 'G': G_val, 'Equilibrium': eq})
+        all_matrices.append(matrix)
     
     dados_heatmap = pd.DataFrame(equilibria)
+
+    print("\nSaving full traceability data (this might take a few seconds)...")
+    mapa_sensibilidade_PxG = pd.concat(all_matrices, ignore_index=True)
+    csv_filename = "traceability_sensitivity_PxG.csv"
+    mapa_sensibilidade_PxG.to_csv(csv_filename, index=False)
+    print(f"[Info] Full traceability data saved to {csv_filename}")
 
     # Visualization: Heatmap
     color_map = {
