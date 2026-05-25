@@ -61,7 +61,6 @@ def get_nash_equilibrium(R, LR, Cs, I, L, alpha, Ca, G, P):
 def main():
     print("--- Sensitivity Analysis of Equilibrium Areas by Opportunity Cost of Delay (LR) ---")
     R = float(input("Consortium Expected Return (R): "))
-    LR_base = float(input("Base opportunity cost due to project delay (LR_base): "))
     Cs = float(input("Consortium judicial/transaction costs (Cs): "))
     I = float(input("Stakeholders base economic revenue (I): "))
     L = float(input("Estimated local local economic impact (L): "))
@@ -77,8 +76,8 @@ def main():
     grade_cenarios = list(itertools.product(p_grid, g_grid))
     total_cenarios = len(grade_cenarios)
     
-    # Variation parameters: From -50% to +50% in steps of 5%
-    variation_steps = np.arange(-50, 55, 5) 
+    # Variation parameters: Linear variation from 0 to R
+    variation_steps = np.linspace(0, R, num=21) 
     
     print(f"\nComputing {total_cenarios} analytical iterations for {len(variation_steps)} LR levels...")
 
@@ -96,7 +95,7 @@ def main():
     
     # Batch computational evaluation iterating over LR variations
     for var in variation_steps:
-        LR_current = LR_base * (1 + var / 100.0)
+        LR_current = var
         
         # Track counts of each equilibrium for the current LR
         equilibria = []
@@ -114,13 +113,13 @@ def main():
         dados_areas = pd.DataFrame(equilibria)
         counts = dados_areas['Equilibrium'].value_counts().to_dict()
         
-        row_result = {'LR_Variation_Pct': var, 'LR_Value': LR_current}
+        row_result = {'LR_Absolute_Value': LR_current}
         for eq in color_map.keys():
             count = counts.get(eq, 0)
             row_result[eq] = (count / total_cenarios) * 100.0
             
         area_results.append(row_result)
-        print(f"Computed LR = {LR_current:7.2f} (Variation: {var:+4d}%)")
+        print(f"Computed LR = {LR_current:7.2f}")
         
     df_areas = pd.DataFrame(area_results)
     
@@ -142,16 +141,16 @@ def main():
     for eq, color in color_map.items():
         # Only plot lines that have some area > 0 across the variations
         if df_areas[eq].max() > 0:
-            plt.plot(df_areas['LR_Variation_Pct'], df_areas[eq], 
+            plt.plot(df_areas['LR_Absolute_Value'], df_areas[eq], 
                      color=color, linewidth=2.5, marker='o', markersize=5, label=eq)
 
-    plt.title("Evolution of Equilibrium Areas by Opportunity Cost of Delay Variation", fontsize=14, fontweight='bold', fontfamily='serif')
-    plt.suptitle(f"Base LR = {LR_base}", fontsize=11, color='gray', fontfamily='serif', y=0.92)
-    plt.xlabel("Variation of Opportunity Cost 'LR' (%)", fontsize=12, fontfamily='serif')
+    plt.title("Evolution of Equilibrium Areas by Absolute Opportunity Cost of Delay", fontsize=14, fontweight='bold', fontfamily='serif')
+    plt.suptitle(f"Expected Return (R) = {R}", fontsize=11, color='gray', fontfamily='serif', y=0.92)
+    plt.xlabel("Absolute Value of Delay Cost 'LR' (in Millions)", fontsize=12, fontfamily='serif')
     plt.ylabel("Area in the P vs G scenario grid (%)", fontsize=12, fontfamily='serif')
 
     # X-axis ticks matching the variation steps
-    plt.xticks(variation_steps)
+    plt.xticks(np.linspace(0, R, num=11))
     plt.grid(True, linestyle='--', alpha=0.6)
 
     # Custom Legend Configuration
