@@ -29,10 +29,9 @@ As próximas atividades recomendadas para fechar o artigo são:
 
 ### Artigo
 
-- [`Paper/main.tex`](/c:/Git/temas/grupo3/Paper/main.tex): arquivo principal do artigo.
-- [`Paper/Game theoretic Model.tex`](/c:/Git/temas/grupo3/Paper/Game%20theoretic%20Model.tex): formulação do problema e do jogo.
-- [`Paper/appendix.tex`](/c:/Git/temas/grupo3/Paper/appendix.tex): apêndice com contexto suplementar, agenda analítica e extensões.
-- [`Paper/references.bib`](/c:/Git/temas/grupo3/Paper/references.bib): bibliografia BibTeX do paper.
+- [`references/source_files/Paper_main.tex`](/c:/Git/temas/grupo3/references/source_files/Paper_main.tex): arquivo principal do artigo.
+- [`references/source_files/Paper_Game_theoretic_Model.tex`](/c:/Git/temas/grupo3/references/source_files/Paper_Game_theoretic_Model.tex): formulação do problema e do jogo.
+- [`references/source_files/Paper_references.bib`](/c:/Git/temas/grupo3/references/source_files/Paper_references.bib): bibliografia BibTeX do paper.
 - [`Paper/main.pdf`](/c:/Git/temas/grupo3/Paper/main.pdf): PDF compilado mais recente.
 
 ### Código
@@ -42,7 +41,7 @@ As próximas atividades recomendadas para fechar o artigo são:
 
 ### Dados úteis para parametrização
 
-- [`Dados Peniche.xlsx`](/c:/Git/temas/grupo3/Dados%20Peniche.xlsx): planilha principal com a aba `Problema de Decisão Abstrato`.
+- [`references/source_files/Dados Peniche.xlsx`](/c:/Git/temas/grupo3/references/source_files/Dados%20Peniche.xlsx): planilha principal com a aba `Problema de Decisão Abstrato`.
 - [`data/peniche_municipal_indicators.pdf`](/c:/Git/temas/grupo3/data/peniche_municipal_indicators.pdf): indicadores municipais de Peniche.
 - [`data/peniche_local_surf_economy_neves_2021.pdf`](/c:/Git/temas/grupo3/data/peniche_local_surf_economy_neves_2021.pdf): economia local do surf em Peniche.
 - [`data/ericeira_world_surfing_reserve_impact_study_2022.pdf`](/c:/Git/temas/grupo3/data/ericeira_world_surfing_reserve_impact_study_2022.pdf): estudo de impacto da reserva mundial de surf de Ericeira.
