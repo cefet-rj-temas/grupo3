@@ -62,7 +62,6 @@ def main():
     print("--- Sensitivity Analysis of Equilibrium Areas by Consortium Judicial Cost (Cs) ---")
     R = float(input("Consortium Expected Return (R): "))
     LR = float(input("Opportunity cost due to project delay (LR): "))
-    Cs_base = float(input("Base Consortium judicial/transaction costs (Cs_base): "))
     I = float(input("Stakeholders base economic revenue (I): "))
     L = float(input("Estimated local local economic impact (L): "))
     alpha = float(input("Mobilization cost coefficient (alpha): "))
@@ -77,8 +76,8 @@ def main():
     grade_cenarios = list(itertools.product(p_grid, g_grid))
     total_cenarios = len(grade_cenarios)
     
-    # Variation parameters: From -50% to +50% in steps of 5%
-    variation_steps = np.arange(-50, 55, 5) 
+    # Variation parameters: Linear variation from 0 to R
+    variation_steps = np.linspace(0, R, num=21)
     
     print(f"\nComputing {total_cenarios} analytical iterations for {len(variation_steps)} Cs levels...")
 
@@ -95,8 +94,7 @@ def main():
     }
     
     # Batch computational evaluation iterating over Cs variations
-    for var in variation_steps:
-        Cs_current = Cs_base * (1 + var / 100.0)
+    for Cs_current in variation_steps:
         
         # Track counts of each equilibrium for the current Cs
         equilibria = []
@@ -114,13 +112,13 @@ def main():
         dados_areas = pd.DataFrame(equilibria)
         counts = dados_areas['Equilibrium'].value_counts().to_dict()
         
-        row_result = {'Cs_Variation_Pct': var, 'Cs_Value': Cs_current}
+        row_result = {'Cs_Absolute_Value': Cs_current}
         for eq in color_map.keys():
             count = counts.get(eq, 0)
             row_result[eq] = (count / total_cenarios) * 100.0
             
         area_results.append(row_result)
-        print(f"Computed Cs = {Cs_current:7.2f} (Variation: {var:+4d}%)")
+        print(f"Computed Cs = {Cs_current:7.2f}")
         
     df_areas = pd.DataFrame(area_results)
     
@@ -142,16 +140,16 @@ def main():
     for eq, color in color_map.items():
         # Only plot lines that have some area > 0 across the variations
         if df_areas[eq].max() > 0:
-            plt.plot(df_areas['Cs_Variation_Pct'], df_areas[eq], 
+            plt.plot(df_areas['Cs_Absolute_Value'], df_areas[eq], 
                      color=color, linewidth=2.5, marker='o', markersize=5, label=eq)
 
-    plt.title("Evolution of Equilibrium Areas by Consortium Judicial Cost Variation", fontsize=14, fontweight='bold', fontfamily='serif')
-    plt.suptitle(f"Base Cs = {Cs_base}", fontsize=11, color='gray', fontfamily='serif', y=0.92)
-    plt.xlabel("Variation of Consortium Judicial Cost 'Cs' (%)", fontsize=12, fontfamily='serif')
+    plt.title("Evolution of Equilibrium Areas by Absolute Consortium Judicial Cost", fontsize=14, fontweight='bold', fontfamily='serif')
+    plt.suptitle(f"Expected Return (R) = {R}", fontsize=11, color='gray', fontfamily='serif', y=0.92)
+    plt.xlabel("Absolute Value of Judicial Cost 'Cs' (in Millions)", fontsize=12, fontfamily='serif')
     plt.ylabel("Area in the P vs G scenario grid (%)", fontsize=12, fontfamily='serif')
 
     # X-axis ticks matching the variation steps
-    plt.xticks(variation_steps)
+    plt.xticks(np.linspace(0, R, num=11))
     plt.grid(True, linestyle='--', alpha=0.6)
 
     # Custom Legend Configuration

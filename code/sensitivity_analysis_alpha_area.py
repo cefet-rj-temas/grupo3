@@ -65,7 +65,6 @@ def main():
     Cs = float(input("Consortium judicial/transaction costs (Cs): "))
     I = float(input("Stakeholders base economic revenue (I): "))
     L = float(input("Estimated local local economic impact (L): "))
-    alpha_base = float(input("Base Mobilization cost coefficient (alpha_base): "))
     Ca = float(input("Stakeholders base judicial/transaction costs (Ca): "))
 
     # Discretization of the parameter space (100 levels per variable)
@@ -77,8 +76,8 @@ def main():
     grade_cenarios = list(itertools.product(p_grid, g_grid))
     total_cenarios = len(grade_cenarios)
     
-    # Variation parameters: From -50% to +50% in steps of 5%
-    variation_steps = np.arange(-50, 55, 5) 
+    # Variation parameters: Linear variation from 0 to 1
+    variation_steps = np.linspace(0, 1, num=21)
     
     print(f"\nComputing {total_cenarios} analytical iterations for {len(variation_steps)} alpha levels...")
 
@@ -95,8 +94,7 @@ def main():
     }
     
     # Batch computational evaluation iterating over alpha variations
-    for var in variation_steps:
-        alpha_current = alpha_base * (1 + var / 100.0)
+    for alpha_current in variation_steps:
         
         # Track counts of each equilibrium for the current alpha
         equilibria = []
@@ -114,13 +112,13 @@ def main():
         dados_areas = pd.DataFrame(equilibria)
         counts = dados_areas['Equilibrium'].value_counts().to_dict()
         
-        row_result = {'alpha_Variation_Pct': var, 'alpha_Value': alpha_current}
+        row_result = {'alpha_Absolute_Value': alpha_current}
         for eq in color_map.keys():
             count = counts.get(eq, 0)
             row_result[eq] = (count / total_cenarios) * 100.0
             
         area_results.append(row_result)
-        print(f"Computed alpha = {alpha_current:7.2f} (Variation: {var:+4d}%)")
+        print(f"Computed alpha = {alpha_current:7.2f}")
         
     df_areas = pd.DataFrame(area_results)
     
@@ -142,16 +140,16 @@ def main():
     for eq, color in color_map.items():
         # Only plot lines that have some area > 0 across the variations
         if df_areas[eq].max() > 0:
-            plt.plot(df_areas['alpha_Variation_Pct'], df_areas[eq], 
+            plt.plot(df_areas['alpha_Absolute_Value'], df_areas[eq], 
                      color=color, linewidth=2.5, marker='o', markersize=5, label=eq)
 
-    plt.title("Evolution of Equilibrium Areas by Mobilization Cost Coefficient Variation", fontsize=14, fontweight='bold', fontfamily='serif')
-    plt.suptitle(f"Base alpha = {alpha_base}", fontsize=11, color='gray', fontfamily='serif', y=0.92)
-    plt.xlabel("Variation of Mobilization Cost Coefficient 'alpha' (%)", fontsize=12, fontfamily='serif')
+    plt.title("Evolution of Equilibrium Areas by Mobilization Cost Coefficient", fontsize=14, fontweight='bold', fontfamily='serif')
+    plt.suptitle("Varying alpha from 0 to 1", fontsize=11, color='gray', fontfamily='serif', y=0.92)
+    plt.xlabel("Absolute Value of Mobilization Cost Coefficient 'alpha'", fontsize=12, fontfamily='serif')
     plt.ylabel("Area in the P vs G scenario grid (%)", fontsize=12, fontfamily='serif')
 
     # X-axis ticks matching the variation steps
-    plt.xticks(variation_steps)
+    plt.xticks(np.linspace(0, 1, 11))
     plt.grid(True, linestyle='--', alpha=0.6)
 
     # Custom Legend Configuration
