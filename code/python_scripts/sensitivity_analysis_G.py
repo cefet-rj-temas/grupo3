@@ -99,13 +99,11 @@ def main():
     plt.plot(dados_plot['G'], dados_plot['Accept'], color='black', linestyle='dashed', linewidth=2, label='Agreement')
     plt.plot(dados_plot['G'], dados_plot['Fight'], color='dimgray', linestyle='solid', linewidth=2, label='Fight')
 
-    plt.title(f"Sensitivity of Compensation Offer (G) for P = {P}", fontsize=14, fontweight='bold', fontfamily='serif')
-    plt.suptitle("Payoff Intersection for Stakeholders (Surf Community)", fontsize=11, color='gray', fontfamily='serif', y=0.92)
     plt.xlabel("Compensation Offer Value (G)", fontsize=12, fontfamily='serif')
     plt.ylabel("Expected Payoff of the Surf Community", fontsize=12, fontfamily='serif')
     
     # Legend settings
-    plt.legend(title="Rational Decision", loc='lower center', bbox_to_anchor=(0.5, -0.2), ncol=2, frameon=True, edgecolor='black')
+    plt.legend(title="Rational Decision", loc='upper center', bbox_to_anchor=(0.5, -0.2), ncol=2, frameon=True, edgecolor='black')
 
     plt.grid(which='major', color='lightgray', linestyle='-')
     plt.minorticks_off()

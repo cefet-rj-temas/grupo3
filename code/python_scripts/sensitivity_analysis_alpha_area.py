@@ -143,8 +143,6 @@ def main():
             plt.plot(df_areas['alpha_Absolute_Value'], df_areas[eq], 
                      color=color, linewidth=2.5, marker='o', markersize=5, label=eq)
 
-    plt.title("Evolution of Equilibrium Areas by Mobilization Cost Coefficient", fontsize=14, fontweight='bold', fontfamily='serif')
-    plt.suptitle("Varying alpha from 0 to 1", fontsize=11, color='gray', fontfamily='serif', y=0.92)
     plt.xlabel("Absolute Value of Mobilization Cost Coefficient 'alpha'", fontsize=12, fontfamily='serif')
     plt.ylabel("Area in the P vs G scenario grid (%)", fontsize=12, fontfamily='serif')
 
@@ -153,7 +151,7 @@ def main():
     plt.grid(True, linestyle='--', alpha=0.6)
 
     # Custom Legend Configuration
-    plt.legend(title="Nash Equilibrium", loc='center left', bbox_to_anchor=(1, 0.5), frameon=True, edgecolor='black')
+    plt.legend(title="Nash Equilibrium", loc='upper center', bbox_to_anchor=(0.5, -0.2), ncol=3, frameon=True, edgecolor='black')
 
     plt.tight_layout()
     plt.show()

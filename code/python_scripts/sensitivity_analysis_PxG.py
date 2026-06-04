@@ -132,8 +132,6 @@ def main():
     # Plot the heatmap
     plt.pcolormesh(G_mesh, P_mesh, Z, cmap=cmap, norm=norm, shading='auto')
 
-    plt.title("Sensitivity Analysis: Probability (P) vs. Compensation (G)", fontsize=14, fontweight='bold', fontfamily='serif')
-    plt.suptitle("Mapping Nash Equilibrium zones in the Offshore vs. Stakeholders conflict", fontsize=11, color='gray', fontfamily='serif', y=0.92)
     plt.xlabel("Financial Compensation Offered (G)", fontsize=12, fontfamily='serif')
     plt.ylabel("Probability of Consortium Judicial Success (P)", fontsize=12, fontfamily='serif')
 
@@ -144,8 +142,8 @@ def main():
     legend_elements = [Patch(facecolor=color_map[eq], edgecolor='black', label=eq) 
                        for eq in unique_equilibria if eq in dados_heatmap['Equilibrium'].unique()]
     
-    plt.legend(handles=legend_elements, title="Resulting Equilibrium:", loc='lower center', 
-               bbox_to_anchor=(0.5, -0.25), ncol=2, frameon=True, edgecolor='black')
+    plt.legend(handles=legend_elements, title="Resulting Equilibrium:", loc='upper center', 
+               bbox_to_anchor=(0.5, -0.25), ncol=3, frameon=True, edgecolor='black')
 
     plt.tight_layout()
     plt.show()
