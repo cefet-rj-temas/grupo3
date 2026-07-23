@@ -1,0 +1,235 @@
+\begin{thebibliography}{25}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Techreport
+\bibitem[{{C{\^a}mara Municipal de Peniche}(2016)}]{cm_peniche_wct_impact_2016}
+\bibinfo{author}{{C{\^a}mara Municipal de Peniche}}, \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{Estudo de Impacto Socioecon{\'o}mico do {Moche Rip
+  Curl Pro Portugal}}.
+\newblock \bibinfo{type}{Technical Report}. C{\^a}mara Municipal de Peniche.
+\newblock \URLprefix
+  \url{https://www.cm-peniche.pt/cmpeniche/uploads/writer_file/document/10814/estudoimpactosocioeconomicomocheripcurlproportugal2015.pdf}.
+  \bibinfo{note}{municipal technical report}.
+%Type = Misc
+\bibitem[{{C{\^a}mara Municipal de Peniche}(2017)}]{cm_peniche_benchmark_2017}
+\bibinfo{author}{{C{\^a}mara Municipal de Peniche}}, \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{Peniche primeiro destino de surf no mundo a caminho
+  da certifica{\c c}{\~a}o de turismo sustent{\'a}vel}.
+\newblock \URLprefix
+  \url{https://www.cm-peniche.pt/municipio/comunicacao/noticias/noticia-32/peniche-e-o-primeiro-destino-de-surf-no-mundo-a-caminho-da-sustentabilidade-no-turismo}.
+  \bibinfo{note}{official municipal communication}.
+%Type = Techreport
+\bibitem[{{C{\^a}mara Municipal de Peniche} et~al.(2017){C{\^a}mara Municipal
+  de Peniche}, {CiTUR} and {Center for Surf
+  Research}}]{cm_peniche_surf_sustainability_2017}
+\bibinfo{author}{{C{\^a}mara Municipal de Peniche}}, \bibinfo{author}{{CiTUR}},
+  \bibinfo{author}{{Center for Surf Research}}, \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{A Sustentabilidade do Turismo de Surf, com aplica{\c
+  c}{\~a}o Pr{\'a}tica em Peniche: Relat{\'o}rio Final}.
+\newblock \bibinfo{type}{Technical Report}. C{\^a}mara Municipal de Peniche.
+\newblock \URLprefix
+  \url{https://www.cm-peniche.pt/cmpeniche/uploads/writer_file/document/11592/relatorio_sustentabilidadeturismosurf_aplicacaopratica_peniche.pdf}.
+  \bibinfo{note}{municipal technical report}.
+%Type = Misc
+\bibitem[{{Clean Air Task Force}(2025)}]{catf_offshore_delay_2025}
+\bibinfo{author}{{Clean Air Task Force}}, \bibinfo{year}{2025}.
+\newblock \bibinfo{title}{Rough seas for offshore wind: A hard look at causes
+  for delay}.
+\newblock \URLprefix
+  \url{https://www.catf.us/2025/01/rough-seas-offshore-wind-hard-look-causes-delay/}.
+  \bibinfo{note}{policy analysis on offshore wind delays and litigation
+  context}.
+%Type = Article
+\bibitem[{Corne(2009)}]{corne_surfing_development_2009}
+\bibinfo{author}{Corne, N.P.}, \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{The implications of coastal protection and
+  development on surfing}.
+\newblock \bibinfo{journal}{Journal of Coastal Research} \bibinfo{volume}{25},
+  \bibinfo{pages}{427--434}.
+\newblock \DOIprefix\doi{10.2112/07-0932.1}.
+%Type = Misc
+\bibitem[{{Di{\'a}rio da Rep{\'u}blica}(1999)}]{portuguese_dl_140_99}
+\bibinfo{author}{{Di{\'a}rio da Rep{\'u}blica}}, \bibinfo{year}{1999}.
+\newblock \bibinfo{title}{Decreto-lei n.{\textordmasculine} 140/99, de 24 de
+  abril}.
+\newblock \URLprefix
+  \url{https://diariodarepublica.pt/dr/detalhe/decreto-lei/140-1999-531828}.
+  \bibinfo{note}{consolidated legal text}.
+%Type = Techreport
+\bibitem[{{European Commission}(2023)}]{portugal_draft_necp_2023}
+\bibinfo{author}{{European Commission}}, \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{Portugal Draft Updated National Energy and Climate
+  Plan 2021--2030}.
+\newblock \bibinfo{type}{Technical Report}. European Commission.
+\newblock \URLprefix
+  \url{https://commission.europa.eu/system/files/2023-07/EN_PORTUGAL%20DRAFT%20UPDATED%20NECP.pdf}.
+  \bibinfo{note}{draft policy report}.
+%Type = Book
+\bibitem[{Gillman and Housman(2019)}]{gillman2019}
+\bibinfo{author}{Gillman, R.A.}, \bibinfo{author}{Housman, D.},
+  \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{Game Theory: A Modeling Approach}.
+\newblock \bibinfo{publisher}{CRC Press}, \bibinfo{address}{Boca Raton}.
+%Type = Article
+\bibitem[{Gonz{\'a}lez(2025)}]{gonzalez_peniche_2025}
+\bibinfo{author}{Gonz{\'a}lez, D.S.}, \bibinfo{year}{2025}.
+\newblock \bibinfo{title}{Analysing the social perception of the {WSL Portugal
+  Pro} as a surf tourism catalyst for peniche}.
+\newblock \bibinfo{journal}{Discover Sustainability} \bibinfo{volume}{6},
+  \bibinfo{pages}{217}.
+\newblock \DOIprefix\doi{10.1007/s43621-025-01050-x}.
+%Type = Misc
+\bibitem[{{IberBlue Wind}(2023)}]{iberblue_isq_2023}
+\bibinfo{author}{{IberBlue Wind}}, \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{Iberblue wind and isq partner to promote offshore
+  wind in portugal}.
+\newblock \URLprefix
+  \url{https://www.iberbluewind.com/news/iberblue-wind-and-isq-partner-to-promote-offshore-wind-in-portugal}.
+  \bibinfo{note}{corporate communication on planned Portuguese floating
+  offshore wind projects and investment magnitudes}.
+%Type = Techreport
+\bibitem[{{IEA Wind TCP}(2025)}]{iea_wind_portugal_2024}
+\bibinfo{author}{{IEA Wind TCP}}, \bibinfo{year}{2025}.
+\newblock \bibinfo{title}{Portugal Annual Report 2024}.
+\newblock \bibinfo{type}{Technical Report}. IEA Wind TCP.
+\newblock \URLprefix
+  \url{https://repositorio.lneg.pt/bitstreams/346eab4f-6f59-4ce8-a54c-b50ae2aca5a3/download}.
+  \bibinfo{note}{country report}.
+%Type = Techreport
+\bibitem[{{INEGI} and {APREN}(2026)}]{inegi_apren2025}
+\bibinfo{author}{{INEGI}}, \bibinfo{author}{{APREN}}, \bibinfo{year}{2026}.
+\newblock \bibinfo{title}{Parques Eólicos em Portugal}.
+\newblock \bibinfo{type}{Technical Report}. Instituto de Ciência e Inovação
+  em Engenharia Mecânica e Engenharia Industrial (INEGI) and Associação
+  Portuguesa de Energias Renováveis (APREN). \bibinfo{address}{Portugal}.
+\newblock \URLprefix
+  \url{https://www.apren.pt/wp-content/uploads/2026/01/Parques-Eolicos-em-Portugal-2024.pdf}.
+  \bibinfo{note}{institutional report}.
+%Type = Misc
+\bibitem[{{ISEG -- Universidade de Lisboa}(2025)}]{iseg_melo_wsl_page}
+\bibinfo{author}{{ISEG -- Universidade de Lisboa}}, \bibinfo{year}{2025}.
+\newblock \bibinfo{title}{Impacto da world surf league na economia portuguesa}.
+\newblock \URLprefix
+  \url{https://www.iseg.ulisboa.pt/estudar/trabalhos-finais-de-mestrado/cemp/1410823742297037/}.
+  \bibinfo{note}{repository page for the master's final work, including impact
+  summary}.
+%Type = Misc
+\bibitem[{{Macedo Vitorino}(2025)}]{macedo_vitorino_paer_2025}
+\bibinfo{author}{{Macedo Vitorino}}, \bibinfo{year}{2025}.
+\newblock \bibinfo{title}{Offshore renewable energies zoning plan allocates
+  portuguese seabed for offshore wind farms}.
+\newblock \URLprefix
+  \url{https://www.macedovitorino.com/en/knowledge/insights/Offshore-renewable-Energies-Zoning-Plan-allocates-Portuguese-seabed-for-Offshore-wind-farms/6654/}.
+  \bibinfo{note}{legal briefing on Portuguese offshore renewable-energy zoning
+  and investment estimates}.
+%Type = Article
+\bibitem[{Machado and {de Andr{\a'e}s}(2023)}]{machado_implications_2023}
+\bibinfo{author}{Machado, J.T.M.}, \bibinfo{author}{{de Andr{\a'e}s}, M.},
+  \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{Implications of offshore wind energy developments in
+  coastal and maritime tourism and recreation areas: {An} analytical overview}.
+\newblock \bibinfo{journal}{Environmental Impact Assessment Review}
+  \bibinfo{volume}{99}.
+\newblock \DOIprefix\doi{10.1016/j.eiar.2022.106999}.
+%Type = Masterthesis
+\bibitem[{de~Melo(2025)}]{melo_wsl_economy_impact2025}
+\bibinfo{author}{de~Melo, D.R.B.}, \bibinfo{year}{2025}.
+\newblock \bibinfo{title}{Impacto da World Surf League na Economia Portuguesa:
+  algumas indicações}.
+\newblock \bibinfo{type}{Trabalho final de mestrado em ciências empresariais}.
+  Universidade de Lisboa. \bibinfo{address}{Lisboa}.
+\newblock \URLprefix \url{https://hdl.handle.net/10400.5/117452}.
+%Type = Article
+\bibitem[{Oh et~al.(2023)Oh, Nam and Kim}]{oh_impacts_2023}
+\bibinfo{author}{Oh, C.O.}, \bibinfo{author}{Nam, J.}, \bibinfo{author}{Kim,
+  H.}, \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{The {Impacts} of {Offshore} {Wind} {Farms} on
+  {Coastal} {Tourists}’ {Behaviors} in {South} {Korea}}.
+\newblock \bibinfo{journal}{Coastal Management} \bibinfo{volume}{51},
+  \bibinfo{pages}{24 -- 41}.
+\newblock \DOIprefix\doi{10.1080/08920753.2023.2148848}.
+%Type = Book
+\bibitem[{Pianezzer(2023)}]{pianezzer2023}
+\bibinfo{author}{Pianezzer, G.A.}, \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{Teoria dos Jogos: Conceitos e Aplicações}.
+\newblock \bibinfo{edition}{1} ed., \bibinfo{publisher}{Intersaberes},
+  \bibinfo{address}{Curitiba}.
+%Type = Misc
+\bibitem[{{Resources for the
+  Future}(2025)}]{resources_litigation_permitting_2025}
+\bibinfo{author}{{Resources for the Future}}, \bibinfo{year}{2025}.
+\newblock \bibinfo{title}{Delays to wind and solar energy projects: Permitting
+  and litigation are not the only obstacles}.
+\newblock \URLprefix
+  \url{https://www.resources.org/archives/delays-to-wind-and-solar-energy-projects-permitting-and-litigation-are-not-the-only-obstacles/}.
+  \bibinfo{note}{policy analysis on renewable-energy permitting, litigation,
+  and delay}.
+%Type = Article
+\bibitem[{Scarfe et~al.(2009)Scarfe, Healy and
+  Rennie}]{scarfe_surfing_review_2009}
+\bibinfo{author}{Scarfe, B.E.}, \bibinfo{author}{Healy, T.R.},
+  \bibinfo{author}{Rennie, H.G.}, \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{Research-{Based} surfing literature for coastal
+  management and the science of surfing---{A} review}.
+\newblock \bibinfo{journal}{Journal of Coastal Research} \bibinfo{volume}{25},
+  \bibinfo{pages}{539--557}.
+\newblock \DOIprefix\doi{10.2112/07-0958.1}.
+%Type = Misc
+\bibitem[{Sewage(2009)}]{sewage_guidance_2009}
+\bibinfo{author}{Sewage, S.A.}, \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{Guidance on environmental impact assessment of
+  offshore renewable energy development on surfing resources and recreation}.
+\newblock \URLprefix
+  \url{https://www.sas.org.uk/wp-content/uploads/2012/04/eia-1.pdf}.
+%Type = Article
+\bibitem[{Smythe et~al.(2020)Smythe, Bidwell, Moore, Smith and
+  McCann}]{smythe_beyond_2020}
+\bibinfo{author}{Smythe, T.}, \bibinfo{author}{Bidwell, D.},
+  \bibinfo{author}{Moore, A.}, \bibinfo{author}{Smith, H.},
+  \bibinfo{author}{McCann, J.}, \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Beyond the beach: {Tradeoffs} in tourism and
+  recreation at the first offshore wind farm in the {United} {States}}.
+\newblock \bibinfo{journal}{Energy Research and Social Science}
+  \bibinfo{volume}{70}.
+\newblock \DOIprefix\doi{10.1016/j.erss.2020.101726}.
+%Type = Article
+\bibitem[{Trandafir et~al.(2020)Trandafir, Gaur, Behanan, Uchida, Lang and
+  Miao}]{trandafir_how_2020}
+\bibinfo{author}{Trandafir, S.}, \bibinfo{author}{Gaur, V.},
+  \bibinfo{author}{Behanan, P.}, \bibinfo{author}{Uchida, E.},
+  \bibinfo{author}{Lang, C.}, \bibinfo{author}{Miao, H.}, \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{How {Are} {Tourists} {Affected} {By} {Offshore}
+  {Wind} {Turbines}? {A} {Case} {Study} {Of} {The} {First} {U}.{S}. {Offshore}
+  {Wind} {Farm}}.
+\newblock \bibinfo{journal}{Journal of Ocean and Coastal Economics}
+  \bibinfo{volume}{7}.
+\newblock \DOIprefix\doi{10.15351/2373-8456.1127}.
+%Type = Misc
+\bibitem[{{Turismo de Portugal}(2026)}]{visit_portugal_peniche}
+\bibinfo{author}{{Turismo de Portugal}}, \bibinfo{year}{2026}.
+\newblock \bibinfo{title}{Peniche}.
+\newblock \URLprefix
+  \url{https://www.visitportugal.com/en/destinos/centro-de-portugal/73769}.
+  \bibinfo{note}{official destination page}.
+%Type = Article
+\bibitem[{Voltaire and Koutchade(2020)}]{voltaire_public_2020}
+\bibinfo{author}{Voltaire, L.}, \bibinfo{author}{Koutchade, O.P.},
+  \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Public acceptance of and heterogeneity in behavioral
+  beach trip responses to offshore wind farm development in {Catalonia}
+  ({Spain})}.
+\newblock \bibinfo{journal}{Resource and Energy Economics}
+  \bibinfo{volume}{60}.
+\newblock \DOIprefix\doi{10.1016/j.reseneeco.2020.101152}.
+
+\end{thebibliography}

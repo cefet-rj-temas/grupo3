@@ -1,72 +1,114 @@
-# Grupo 3
+# Offshore Wind and Surf-Tourism Game Model
 
-Repositório de trabalho para produção do artigo sobre conflito, negociação e modelagem entre energia eólica offshore e interesses de surfe/turismo em Portugal, com motivação territorial em Ericeira e calibração de ordem de grandeza em Peniche.
+This repository is the organized submission package for the article **"Negotiating Offshore Wind and Surf-Tourism Interests: A Peniche-Based Game-Theoretic Model"**.
 
-## Objetivo do repositório
+The active package is intentionally small. Files that are not part of the manuscript, model execution, parameter audit, or article support material were preserved under `legacy/original_workspace/`.
 
-O objetivo atual é viabilizar a produção do artigo, consolidando:
+## Repository Map
 
-- o texto principal em LaTeX;
-- a formulação do modelo de decisão;
-- a análise exploratória em R;
-- a base de referências e dados já triada;
-- o descarte controlado do material considerado não relevante.
+### Root
 
-## Planejamento de atividades
+- `.gitignore` - repository ignore rules.
+- `LICENSE` - repository license.
+- `README.md` - this repository guide.
 
-As próximas atividades recomendadas para fechar o artigo são:
+### Manuscript
 
-1. Revisar o argumento central do artigo e alinhar título, resumo e conclusão para a versão final do alvo editorial.
-2. Refinar a seção metodológica para explicitar com mais força a ponte entre Ericeira, Peniche e a modelagem abstrata.
-3. Enxugar a bibliografia de trabalho, priorizando os arquivos mais fortes de `references/curated`.
-4. Selecionar quais figuras e tabelas de `Paper/generated` realmente entram no artigo final.
-5. Rodar nova rodada de sensibilidade no script R, caso seja necessário testar cenários adicionais de `P`, `L`, `G`, `C_a` e diferenças de ordem de grandeza entre offshore e surfe.
-6. Decidir se o apêndice deve permanecer robusto ou se parte dele deve migrar para o corpo principal do artigo.
-7. Revisar a consistência das citações locais e de literatura cinzenta, especialmente nos materiais sobre Peniche, economia do surf e relatórios portugueses.
-8. Fazer leitura final do PDF compilado, verificando linguagem, repetição de ideias, tamanho do texto e aderência ao periódico-alvo.
+- `manuscript/main.tex` - journal manuscript source.
+- `manuscript/references.bib` - BibTeX database used by the manuscript.
+- `manuscript/main.bbl` - compiled bibliography file produced by BibTeX.
+- `manuscript/main.pdf` - compiled manuscript PDF.
+- `manuscript/README.md` - manuscript folder guide.
+- `manuscript/elsarticle-harv.bst` - bibliography style used by the manuscript.
+- `manuscript/elsarticle-num.bst` - additional Elsevier bibliography style kept for submission compatibility.
+- `manuscript/elsarticle-num-names.bst` - additional Elsevier bibliography style kept for submission compatibility.
+- `manuscript/images/grafico1.png` - article figure.
+- `manuscript/images/grafico2.png` - article figure.
+- `manuscript/images/grafico3.png` - article figure.
+- `manuscript/images/grafico4.png` - article figure.
+- `manuscript/images/grafico5.png` - article figure.
+- `manuscript/images/grafico6.png` - article figure.
+- `manuscript/images/grafico7.png` - article figure.
+- `manuscript/images/grafico8.png` - article figure.
+- `manuscript/images/grafico9.png` - article figure.
+- `manuscript/generated_outputs/README.md` - generated-output note.
+- `manuscript/generated_outputs/baseline_payoff_matrix.csv` - mirrored baseline payoff matrix.
+- `manuscript/generated_outputs/model_parameters.csv` - mirrored parameter table.
+- `manuscript/generated_outputs/peniche_tourism_series.csv` - mirrored Peniche tourism series.
+- `manuscript/generated_outputs/sensitivity_grid.csv` - mirrored sensitivity grid.
+- `manuscript/generated_outputs/sensitivity_summary.csv` - mirrored sensitivity summary.
+- `manuscript/generated_outputs/fight_preference_heatmap.png` - mirrored fight-preference heatmap.
+- `manuscript/generated_outputs/peniche_tourism_indicators.png` - mirrored tourism-indicator figure.
 
-## Estrutura relevante
+### Simulation
 
-### Artigo
+- `simulation/r/run_peniche_offshore_analysis.R` - main reproducible R workflow.
+- `simulation/README.md` - simulation folder guide.
+- `simulation/python/probability_compensation_heatmap.py` - Python implementation of the `P x G` heatmap.
+- `simulation/python/compensation_sensitivity.py` - Python compensation-sensitivity script.
+- `simulation/python/stakeholder_cost_area_sensitivity.py` - stakeholder-cost area-sensitivity script.
+- `simulation/python/consortium_cost_area_sensitivity.py` - consortium-cost area-sensitivity script.
+- `simulation/python/delay_loss_area_sensitivity.py` - delay-loss area-sensitivity script.
+- `simulation/python/withdrawal_cost_share_area_sensitivity.py` - withdrawal-cost-share area-sensitivity script.
+- `simulation/requirements.txt` - Python package requirements.
+- `simulation/offshore_surf_tourism_game.Rproj` - RStudio project file.
+- `simulation/outputs/baseline_payoff_matrix.csv` - regenerated baseline payoff matrix.
+- `simulation/outputs/model_parameters.csv` - regenerated parameter table.
+- `simulation/outputs/peniche_tourism_series.csv` - regenerated Peniche tourism series.
+- `simulation/outputs/sensitivity_grid.csv` - regenerated sensitivity grid.
+- `simulation/outputs/sensitivity_summary.csv` - regenerated sensitivity summary.
+- `simulation/outputs/fight_preference_heatmap.png` - regenerated fight-preference heatmap.
+- `simulation/outputs/peniche_tourism_indicators.png` - regenerated tourism-indicator figure.
 
-- [`references/source_files/Paper_main.tex`](/c:/Git/temas/grupo3/references/source_files/Paper_main.tex): arquivo principal do artigo.
-- [`references/source_files/Paper_Game_theoretic_Model.tex`](/c:/Git/temas/grupo3/references/source_files/Paper_Game_theoretic_Model.tex): formulação do problema e do jogo.
-- [`references/source_files/Paper_references.bib`](/c:/Git/temas/grupo3/references/source_files/Paper_references.bib): bibliografia BibTeX do paper.
-- [`Paper/main.pdf`](/c:/Git/temas/grupo3/Paper/main.pdf): PDF compilado mais recente.
+### Data
 
-### Código
+- `data/peniche_decision_model_workbook.xlsx` - source workbook for the abstract decision model.
+- `data/README.md` - data folder guide.
+- `data/peniche_decision_model_sheet.tsv` - extracted decision-model worksheet.
+- `data/peniche_municipal_indicators.pdf` - Peniche municipal indicators.
+- `data/peniche_municipal_profile.pdf` - additional Peniche municipal profile.
+- `data/peniche_local_surf_economy_neves_2021.pdf` - Peniche surf-economy thesis.
+- `data/ericeira_world_surfing_reserve_impact_2022.pdf` - Ericeira World Surfing Reserve impact study.
+- `data/wsl_portugal_economic_impact.pdf` - WSL Portugal economic-impact source.
+- `data/model_parameter_source_notes.md` - English consolidation of qualitative notes for model parameters.
 
-- [`code/peniche_offshore_analysis.R`](/c:/Git/temas/grupo3/code/peniche_offshore_analysis.R): workflow principal de análise exploratória.
-- [`code/README.md`](/c:/Git/temas/grupo3/code/README.md): instruções e ligação do código com o artigo.
+### Documentation
 
-### Dados úteis para parametrização
+- `documentation/parameter_audit.md` - audit of model parameters, sources, and remaining verification points.
+- `documentation/README.md` - documentation folder guide.
+- `documentation/supplementary_notes.md` - support material moved out of the article appendix.
 
-- [`references/source_files/Dados Peniche.xlsx`](/c:/Git/temas/grupo3/references/source_files/Dados%20Peniche.xlsx): planilha principal com a aba `Problema de Decisão Abstrato`.
-- [`data/peniche_municipal_indicators.pdf`](/c:/Git/temas/grupo3/data/peniche_municipal_indicators.pdf): indicadores municipais de Peniche.
-- [`data/peniche_local_surf_economy_neves_2021.pdf`](/c:/Git/temas/grupo3/data/peniche_local_surf_economy_neves_2021.pdf): economia local do surf em Peniche.
-- [`data/ericeira_world_surfing_reserve_impact_study_2022.pdf`](/c:/Git/temas/grupo3/data/ericeira_world_surfing_reserve_impact_study_2022.pdf): estudo de impacto da reserva mundial de surf de Ericeira.
-- [`data/parameter_notes_maureen_for_model.txt`](/c:/Git/temas/grupo3/data/parameter_notes_maureen_for_model.txt): notas qualitativas para construção de parâmetros.
-- [`data/README.md`](/c:/Git/temas/grupo3/data/README.md): racional da seleção dos dados.
+### References
 
-### Referências curadas
+- `references/curated_reference_inventory.md` - working inventory of curated literature and support sources.
+- `references/README.md` - references folder guide.
 
-- [`references/curated`](/c:/Git/temas/grupo3/references/curated): acervo triado de arquivos relevantes para sustentar o artigo.
-- [`references/CURATED_REFERENCES.md`](/c:/Git/temas/grupo3/references/CURATED_REFERENCES.md): inventário arquivo a arquivo do que foi mantido e por quê.
-- [`references/Dados_Peniche_Problema_de_Decisao_Abstrato.tsv`](/c:/Git/temas/grupo3/references/Dados_Peniche_Problema_de_Decisao_Abstrato.tsv): extração tabular da aba central da planilha.
-- [`references/USED_FILES.md`](/c:/Git/temas/grupo3/references/USED_FILES.md): visão resumida dos arquivos ativos no fluxo atual.
+### Legacy
 
-### Saídas geradas
+- `legacy/original_workspace/` - previous working tree, including older article drafts, raw vault material, old folder names, and files not needed in the active submission package.
+- `legacy/build_artifacts/` - auxiliary build files moved out of the active manuscript package.
 
-- [`Paper/generated`](/c:/Git/temas/grupo3/Paper/generated): saídas do script R, incluindo matrizes, séries e figuras exploratórias.
+## Build the Manuscript
 
-### Material descartado
+From `manuscript/`:
 
-- [`vault/curated`](/c:/Git/temas/grupo3/vault/curated): arquivos triados e considerados não relevantes para o recorte atual do artigo.
-- [`vault/data_screening`](/c:/Git/temas/grupo3/vault/data_screening): materiais avaliados como fracos para parametrização.
-- [`vault/discarded`](/c:/Git/temas/grupo3/vault/discarded): itens antigos, duplicados ou superados.
-- [`vault/CURATED_VAULT.md`](/c:/Git/temas/grupo3/vault/CURATED_VAULT.md): justificativa da triagem para o `vault`.
-- [`vault/NON_RELEVANT_FILES.md`](/c:/Git/temas/grupo3/vault/NON_RELEVANT_FILES.md): descarte anterior já consolidado.
+```powershell
+pdflatex -interaction=nonstopmode main.tex
+bibtex main
+pdflatex -interaction=nonstopmode main.tex
+pdflatex -interaction=nonstopmode main.tex
+```
 
-## Observação
+## Run the Main Simulation Workflow
 
-O diretório `vault` guarda material cuja triagem indicou não relevância para o trabalho no recorte atual. Esses arquivos foram preservados apenas para rastreabilidade e eventual reavaliação futura, não como base ativa do artigo.
+From the repository root:
+
+```powershell
+Rscript .\simulation\r\run_peniche_offshore_analysis.R
+```
+
+The workflow reads `data/peniche_decision_model_workbook.xlsx` and writes regenerated outputs to `simulation/outputs/`.
+
+## Current Audit Note
+
+The manuscript currently uses a Peniche/WSL calibration (`I=22`, `Cs=2`, `alpha=0.1`). Some mirrored CSV outputs in `manuscript/generated_outputs/` reflect the older worksheet calibration (`I=10`, `Cs=3`, `alpha=0`). This mismatch is documented in `documentation/parameter_audit.md` and should be resolved before final submission by regenerating figures and traceability outputs with the final approved parameters.

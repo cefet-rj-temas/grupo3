@@ -1,10 +1,12 @@
 # Data
 
-Arquivos trazidos de `Dados para exemplo do modelo matemático` por terem utilidade direta para calibração ou teste de parâmetros do modelo.
+This folder contains the active data and source documents used to support the article and the simulation workflow.
 
-- `peniche_municipal_indicators.pdf`: indicadores municipais de Peniche para ordem de grandeza socioeconômica local.
-- `peniche_local_surf_economy_neves_2021.pdf`: dissertação com foco direto na economia local do surf em Peniche.
-- `ericeira_world_surfing_reserve_impact_study_2022.pdf`: estudo de impacto dos 10 anos da reserva mundial de surf da Ericeira.
-- `parameter_notes_maureen_for_model.txt`: notas qualitativas com sugestões explícitas para parametrização de `R`, `I`, `L`, compensação e cenários.
-- `Concelho - Peniche.pdf`: indicadores municipais adicionais de Peniche.
-- `WSL_portugal_economy.pdf`: impacto econômico da World Surf League em Portugal.
+- `peniche_decision_model_workbook.xlsx` - source workbook for the abstract decision model.
+- `peniche_decision_model_sheet.tsv` - extracted worksheet used for traceability.
+- `peniche_municipal_indicators.pdf` - municipal indicators for Peniche.
+- `peniche_municipal_profile.pdf` - additional municipal profile for Peniche.
+- `peniche_local_surf_economy_neves_2021.pdf` - thesis on Peniche's local surf economy.
+- `ericeira_world_surfing_reserve_impact_2022.pdf` - Ericeira World Surfing Reserve impact study.
+- `wsl_portugal_economic_impact.pdf` - source for WSL economic-impact evidence.
+- `model_parameter_source_notes.md` - English consolidation of the qualitative notes used during parameter design.

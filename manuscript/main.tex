@@ -1,0 +1,366 @@
+\documentclass[final,times,authoryear]{elsarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
+\newcommand{\warn}[1]{{\color{red} {#1}}}
+\newcommand{\verify}[1]{{\color{blue} {#1}}}
+\newcommand{\remarks}[2]{{\color{red} #1\ (\textit{#2})}}
+
+\journal{Coastal Management}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Negotiating Offshore Wind and Surf-Tourism Interests: A Peniche-Based Game-Theoretic Model}
+
+\author[first]{Maureen Flores}
+\author[sec]{Geraldo Xexéo}
+\author[third]{Flavio Santos}
+\author[third]{William Veras}
+\author[third]{Diego Carvalho}
+\author[third]{Eduardo Ogasawara}
+
+
+\affiliation[first]{organization={University of Aveiro}, country={Portugal}}
+\affiliation[sec]{organization={Federal University of Rio de Janeiro}, country={Brazil}}
+\affiliation[third]{organization={Federal Center for Technological Education of Rio de Janeiro}, country={Brazil}}
+
+\begin{abstract}
+Offshore wind expansion is becoming central to Portugal's decarbonization strategy, but its implementation increasingly overlaps with coastal spaces that already sustain tourism and recreation. In Peniche, this overlap is especially sensitive because the local surf-tourism economy depends on the preservation of wave conditions as a place-based environmental asset. This setting creates a difficult bargaining problem: offshore proponents may retain strong incentives to implement a project under conflict, while local actors may still find resistance rational when they expect significant losses and weak institutional protection. This article addresses that problem by asking under what conditions the interaction between offshore proponents and surf-tourism stakeholders leads to acceptance, litigation, or strategic instability. Our working hypothesis is that the conflict is shaped not by expected damage alone, but by the interaction between expected local loss, compensation, litigation costs, delay, and the perceived probability of offshore success. To examine that hypothesis, we formalize the dispute as a simultaneous non-cooperative game and evaluate the model with an order-of-magnitude calibration anchored in the Peniche case. The article's methodological contribution lies in the game-theoretic model itself, while its applied contribution lies in showing how changes in those parameters alter the strategic regions associated with acceptance, litigation, and instability. The results indicate that conflict can remain strategically stable even when negotiated acceptance would be socially preferable. They also show that coexistence between offshore deployment and surf-based coastal economies depends not only on technical feasibility, but also on institutional representation, compensation design, and procedural conditions.
+\end{abstract}
+
+\begin{keyword}
+offshore wind \sep surfing \sep coastal tourism \sep game theory \sep negotiation \sep Portugal
+\end{keyword}
+
+\end{frontmatter}
+
+\section{Introduction}
+\label{sec_introduction}
+
+Offshore wind expansion has become a central component of Portugal's decarbonization strategy, but its implementation depends on coastal and maritime spaces that already sustain other economic uses \citep{portugal_draft_necp_2023,iea_wind_portugal_2024}. In Peniche, this tension is especially sharp because the same coastal system that attracts infrastructure investment also supports a surf-tourism economy whose value depends on the preservation of wave conditions, local identity, and destination attractiveness \citep{visit_portugal_peniche,cm_peniche_benchmark_2017,gonzalez_peniche_2025}. The conflict is therefore not only about energy development or seascape perception, but also about how a place-based coastal economy responds when a strategic infrastructure project threatens the quality of the environmental resource on which that economy depends.
+
+The literature shows that offshore wind developments can affect tourism preferences and recreational behavior, although these effects are context-sensitive and mediated by landscape perception, project design, and the type of activity under analysis \citep{machado_implications_2023,oh_impacts_2023,trandafir_how_2020,voltaire_public_2020,smythe_beyond_2020}. For surfing, the concern is more specific because the asset under dispute is not only visual amenity but also the quality and regularity of the wave resource itself \citep{scarfe_surfing_review_2009,corne_surfing_development_2009,sewage_guidance_2009}. Unlike other maritime sectors that can be relocated more easily, surfing depends on highly specific bathymetric, hydrodynamic, and aeolian conditions \citep{scarfe_surfing_review_2009,corne_surfing_development_2009}. In a locality such as Peniche, where surfing also sustains events, services, and broader tourism income, degradation in wave quality may translate into losses that are both environmental and economic \citep{gonzalez_peniche_2025,cm_peniche_surf_sustainability_2017}.
+
+Taken together, these conditions create a difficult bargaining problem. Offshore proponents may retain strong incentives to implement a project even under conflict, while local actors may still find resistance rational when they expect significant losses and weak institutional protection. At the same time, surf-tourism does not always enter maritime negotiation arenas with the same organizational density or explicit bargaining structures found in other coastal sectors \citep{cm_peniche_surf_sustainability_2017,gonzalez_peniche_2025}. The result is a conflict that can persist through litigation, delay, compensation disputes, and procedural deadlock, even when some negotiated outcome would be collectively preferable.
+
+This article addresses that problem by proposing a game-theoretic model of the conflict between offshore wind proponents and surf-tourism stakeholders in Peniche. The central research question is: under what conditions does this interaction lead to acceptance, litigation, or strategic instability? Our working hypothesis is that the conflict is shaped not by damage alone, but by the interaction between expected local loss, compensation, litigation costs, delay, and the perceived probability of offshore success. The model therefore represents the interaction as a simultaneous non-cooperative game and evaluates its behavior under alternative values for those parameters.
+
+More specifically, the article contributes by formalizing the strategic conflict in normal form, by linking the players' choices to interpretable economic and legal parameters, by examining how changes in those parameters alter the strategic regions associated with acceptance, litigation, and instability, and by using the Peniche case to show how a surf-based coastal economy can remain vulnerable even when negotiated coexistence is socially preferable to conflict. The remainder of the article is organized as follows. Section 2 presents the theoretical framework, Section 3 develops the model and the experimental design, Section 4 discusses the results, and Section 5 concludes.
+
+\section{Theoretical Framework}
+\subsection{Offshore Wind Energy and Coastal Conflicts}
+
+Offshore wind energy is rapidly becoming one of the central pillars of Portugal's decarbonization policy. Recent institutional reports indicate an operational offshore capacity on the order of 0.03 GW in Portugal, while the National Energy and Climate Plan (PNEC 2030) sets a 2.0 GW target for 2030 \citep{inegi_apren2025,iea_wind_portugal_2024,portugal_draft_necp_2023}. This projected value is approximately 67 times greater than the current operational capacity, making the scale of the expected territorial and financial investments in the sector clear.
+
+This expansion agenda directly overlaps with coastal and maritime spaces already used by tourism and recreation. The literature does not suggest a single, uniform impact of offshore wind on these sectors. Instead, it shows heterogeneous effects shaped by project design, visibility, user preferences, and local context \citep{machado_implications_2023,oh_impacts_2023,trandafir_how_2020,voltaire_public_2020,smythe_beyond_2020}. Some studies emphasize changes in tourist behavior and destination choice, while others stress trade-offs in public acceptance, recreational use, and perceived coastal value. For this reason, the relevant question for the present article is not whether offshore wind affects coastal use in the abstract, but how those effects become strategically significant in a locality whose economy depends on a specific environmental asset.
+
+In the case of surfing, that asset is not merely scenic amenity. It is the quality and regularity of the wave resource itself \citep{scarfe_surfing_review_2009,corne_surfing_development_2009,sewage_guidance_2009}. Unlike some other maritime activities that can be relocated more easily, surfing depends on highly specific bathymetric, hydrodynamic, and aeolian conditions \citep{scarfe_surfing_review_2009,corne_surfing_development_2009}. As a result, coastal conflict around offshore infrastructure is not only a dispute over visual intrusion or generalized tourism preferences. It may also involve the possible degradation of the physical conditions that sustain local events, businesses, and recurrent visitation. In this sense, the Portuguese debate is not merely technological; it is also political, institutional, territorial, and economic.
+
+\subsection{Surf-Tourism as an Economic Engine in Peniche}
+
+Peniche provides an appropriate empirical reference because surfing in the municipality is not a marginal recreational activity. It is part of a broader local economic structure tied to events, accommodation, services, food, transport, and the international visibility generated by competitive surfing \citep{visit_portugal_peniche,cm_peniche_wct_impact_2016,gonzalez_peniche_2025,melo_wsl_economy_impact2025}. In this sense, the surf side of the conflict should not be understood as a narrow niche of practitioners, but as a coalition organized around a place-based economic asset.
+
+The case is especially useful because the local surf economy can be translated into interpretable economic magnitudes. As discussed by \citep{melo_wsl_economy_impact2025}, the impacts associated with surfing events and their local effects can be separated into \textbf{direct}, \textbf{indirect}, and \textbf{induced} components. This distinction matters analytically because it shows that potential losses are not limited to the immediate practice of surfing. They may propagate through the local service economy and therefore affect a wider set of stakeholders than surfers alone \citep{cm_peniche_surf_sustainability_2017,gonzalez_peniche_2025}.
+
+The same study reports that the 2024 edition of the \textit{Meo Rip Curl Pro Portugal}, with an audience of 120,000 spectators, generated a total Gross Added Value (GAV) impact of \textbf{€22.296 million} \citep{melo_wsl_economy_impact2025}. For the present article, this figure does not function as a complete valuation of the municipality. Rather, it provides an order-of-magnitude reference that helps justify why local actors may have rational and quantifiable incentives to resist an offshore project that is expected to damage the environmental conditions supporting surf-tourism income.
+
+\subsection{Compensation, Evidence, and Representation}
+
+The compensation problem is central because surf-related loss is difficult to translate into a standard monetary claim. In the Portuguese environmental setting, compensatory measures are not merely cash transfers; they must be connected to the ecological and territorial effects of the project, the affected habitats, and the populations or uses that depend on them \citep{portuguese_dl_140_99}. For a surf-based economy, this creates an evidentiary burden: the affected side must show not only that waves continue or disappear, but whether changes in wave quality, submerged morphology, event viability, or destination attractiveness undermine the specific environmental asset that supports local economic activity \citep{scarfe_surfing_review_2009,corne_surfing_development_2009}.
+
+This also creates a representation problem. If compensation becomes part of the negotiation, the legitimate recipient is not self-evident. The surfing field may include local associations, event organizers, schools, accommodation operators, informal service networks, and broader tourism actors whose economic dependence on surfing is real but institutionally fragmented \citep{cm_peniche_surf_sustainability_2017,gonzalez_peniche_2025}. For that reason, the model treats compensation as a strategic parameter rather than as a purely administrative transfer: its effect depends on whether it is credible, targeted, and recognized by the actors whose expected losses motivate resistance.
+
+\subsection{Game Theory}
+
+Game Theory offers a useful language for studying this conflict because the outcome for each side depends not only on its own preferences, but also on the expected response of the opposing side \citep{pianezzer2023,gillman2019}. In the present case, offshore proponents and surf-tourism stakeholders do not make isolated decisions. Their payoffs depend on whether the project is advanced, whether resistance is mobilized, how costly litigation becomes, and whether compensation or delay alters the incentives of each coalition.
+
+This strategic interdependence makes normal-form modelling especially useful \citep{gillman2019}. A normal-form game does not reproduce every institutional detail of a real dispute, but it makes explicit the set of players, the available strategies, and the payoffs associated with each strategic combination. For coastal-use conflicts, this is analytically valuable because it allows the researcher to distinguish between individually rational decisions and collectively preferable outcomes, and to identify which parameters must change for the conflict to shift shape.
+
+\subsubsection{Rationality, Pay-off and Utility Function}
+
+Within this model, we adopt the standard premise of player rationality when a strategy is chosen. Rationality refers to the selection of the strategy that best optimizes a player's result within a given context. As described by \citep{pianezzer2023}, this generally implies the use of available information to maximize payoff, or utility, even in games with incomplete information.
+
+In Game Theory, the values of the outcomes obtained by a player after adopting a strategy are known as payoffs \citep{pianezzer2023}. To formalize this, we use the concept of a utility function, which associates each combination of plays by all players with a specific payoff for a given player. Mathematically, this is denoted as:
+
+    \begin{equation}
+        u_i(s_i, s_{-i}) \in \mathbb{R}
+    \end{equation}
+
+Where $u_i$ represents the utility function of player $i$, $s_i$ is the strategy adopted by player $i$, and $s_{-i}$ represents the strategies adopted by all other players.
+
+\subsection{Nash Equilibrium}
+
+The Nash Equilibrium is the central solution concept used in this article. It represents a strategic outcome in which each player is making the best possible choice given the choices of the others \citep{pianezzer2023,gillman2019}. Mathematically, a combination of strategies is considered a Nash Equilibrium if:
+
+    \begin{equation}
+    u_i(s_i^\ast, s_{-i}^\ast) \geq u_i(s_i, s_{-i}^\ast), \quad \text{where } \forall s_i \in S_i \text{ e } \forall i \in N
+    \end{equation}
+
+In this inequality:
+
+    \begin{itemize}
+    \item $s_i^\ast$ represents the equilibrium strategy chosen by player $i$;
+    \item $s_{-i}^\ast$ represents the set of equilibrium strategies of the other players;
+    \item $s_i$ represents an alternative strategy available to player $i$;
+    \item $S_i$ represents the set of possible strategies for player $i$, and $N$ represents the set of players.
+    \end{itemize}
+
+The inequality $u_i(s_i^\ast, s_{-i}^\ast) \geq u_i(s_i, s_{-i}^\ast) $ indicates that no player has an incentive to deviate unilaterally, because any alternative choice would result in an equal or worse payoff \citep{pianezzer2023}. In intuitive terms, the Nash Equilibrium represents a state of strategic stability. This concept is especially important here because the article is not only interested in whether conflict occurs, but also in whether conflict can remain stable even when another available outcome would be socially preferable. That distinction becomes central in the later comparison between litigation equilibrium and negotiated coexistence.
+
+\section{Methodology: Game Modeling and Experimental Design}
+
+To answer the research question, the context is modeled as a $2\times2$ non-cooperative game that explicitly frames the interaction as a private-sector versus private-sector dynamic. Player 1 represents the energy consortium aiming to implement an offshore wind farm in the region: a highly capitalized corporate entity driven by national decarbonization mandates, maritime spatial concessions, and the pursuit of large infrastructural returns. Conversely, \verify{Player 2 represents a strategic institutional partnership between the local tourism chamber, whose primary interest lies in protecting the region's surf and tourism economy, and the World Surf League (WSL).}
+
+Because the WSL's global business model relies on high-quality wave conditions, the organization possesses both the institutional weight and the rational incentive to use local socio-economic data to advocate for the region's preservation against competing offshore infrastructure. Player 1 chooses between Implement and Withdraw, while Player 2 chooses between Accept and Fight, where the latter represents community resistance through public hearings, legal disputes, technical contestation, and negotiation pressure. This modeling does not seek to represent the full internal diversity of each side; rather, it captures their collective strategic action at the point where escalation or accommodation becomes decisive.
+
+Formally, the strategy sets are defined as
+
+    \begin{equation}
+    S_1 = \{\text{Implement}, \text{Withdraw}\}, \qquad S_2 = \{\text{Accept}, \text{Fight}\},
+    \end{equation}
+
+where Player 1 denotes the offshore coalition and Player 2 denotes the surf-tourism coalition. The resulting payoff structure is therefore a normal-form game in which each strategic cell represents a possible joint outcome of the dispute.
+
+\subsection{Game Modeling}
+
+To represent the analyzed context, we adopt a set of variables that captures the main economic and institutional elements of the conflict. Keeping the focus on Peniche as our empirical baseline, the variables (in millions of euros) are:
+
+    \begin{itemize}
+    \item $R$ = 100: Normalized gross expected return from the offshore project, used as a modelling scale for a sector whose Portuguese deployment involves billion-euro investment magnitudes \citep{iberblue_isq_2023,macedo_vitorino_paer_2025}.
+    \item \verify{$LR$ = 20: Expected reduction in offshore return due to concessions, redesign, or delays associated with the dispute.}
+    \item \verify{$C_s$ = 2: Cost for the offshore consortium to sustain the dispute.}
+    \item $I$ = 22: Order-of-magnitude proxy for stakeholder revenue in the status quo, based on Peniche's surf-related GVA benchmark \citep{melo_wsl_economy_impact2025,iseg_melo_wsl_page}.
+    \item $L$: Expected loss in stakeholder revenue if the project is implemented.
+    \item $C_a$ (Variable: 0 to $I$): Cost incurred by the stakeholders when fighting.
+    \item $G$: Compensation expected by stakeholders if the project is materialized.
+    \item \verify{$P$: Probability that the offshore side prevails in the dispute.}
+    \item \verify{$\alpha$ = 0.1: Residual fraction of the contestation cost borne by the stakeholders if the offshore coalition withdraws.}
+    \end{itemize}
+
+These variables represent the main economic and institutional factors that influence the strategies chosen by the players. As shown in Table \ref{tab:abstract_game}, conflict between the players occurs only when Player 1 adopts Implement and Player 2 adopts Fight. In this combination, each player's payoff depends on the probability of the consortium prevailing in a legal dispute.
+
+    \begin{table}[H]
+    \centering
+    \caption{Abstract decision problem for offshore wind versus surf-tourism.}
+    \label{tab:abstract_game}
+    \begin{tabular}{lcc}
+    \toprule
+     & Accept & Fight \\
+    \midrule
+    Implement & $(R, I-L)$ & $(G_1, G_2)$ \\
+    Withdraw & $(0, I)$ & $(0, I-\alpha C_a)$ \\
+    \bottomrule
+    \end{tabular}
+    \end{table}
+
+We model these probabilistic results for the Implement / Fight scenario as:
+
+    \begin{equation}
+    G_1 = P(R-LR-C_s-G) + (1-P)(-C_s),
+    \label{eq:g1}
+    \end{equation}
+    
+    \begin{equation}
+    G_2 = (1-P)(I-C_a) + P(I-L+G-C_a).
+    \label{eq:g2}
+    \end{equation}
+
+Equation \ref{eq:g1} establishes that if Player 1 wins, the player retains the project's net return minus the expected loss $LR$, the legal cost $C_s$, and the compensation paid $G$. If Player 1 loses, the player absorbs only the legal cost of the dispute. Equation \ref{eq:g2} establishes that if Player 2 wins, the player preserves status quo revenue minus the legal costs of the fight; if Player 2 loses, the player bears the local loss $L$ but recovers part of it through compensation $G$.
+
+The model rests on four simplifying premises that are important for interpretation. First, heterogeneous actors are aggregated into two coalitions. Second, the interaction is represented as simultaneous and static rather than sequential. Third, uncertainty is reduced to a single probability of offshore success, $P$. Fourth, the economic benchmark $I=22$ is used as an order-of-magnitude proxy for the surf-tourism income relevant to the conflict, rather than as a complete measure of Peniche's economy. These simplifications delimit the model's purpose. It does not estimate hydrodynamic damage, adjudicate legal standing, or resolve the internal distribution of compensation. Instead, it shows how those issues enter the strategic structure once they are represented as expected loss, compensation, litigation cost, delay, and perceived probability of offshore success \citep{catf_offshore_delay_2025,resources_litigation_permitting_2025}.
+
+\subsection{Dominance Conditions and Strategic Interpretation}
+
+The payoff equations allow us to derive threshold conditions that guide the interpretation of the experiments. For the offshore side, implementation remains preferable to withdrawal whenever the conflict payoff is positive:
+
+    \begin{equation}
+    G_1 > 0 \Longleftrightarrow P(R-LR-G) > C_s.
+    \label{eq:offshore_condition}
+    \end{equation}
+
+This inequality shows that the offshore coalition does not compare $R$ with zero in a naive way. Instead, it compares a probability-weighted net return with the direct cost of sustaining conflict.
+
+For the surf-tourism side, fighting is preferred to accepting whenever the expected conflict payoff is at least as high as passive acceptance:
+
+    \begin{equation}
+    G_2 \geq I-L \Longleftrightarrow C_a \leq (1-P)L + PG.
+    \label{eq:opponent_condition}
+    \end{equation}
+
+This condition captures the central trade-off for the local side: resistance becomes more attractive when expected losses are high, compensation softens the downside risk of losing, and the cost of mobilization remains manageable. Together, Equations \ref{eq:offshore_condition} and \ref{eq:opponent_condition} provide the formal basis for interpreting the strategic regions explored in the simulations.
+
+\subsection{Impact Scenarios}
+
+To evaluate the results under different conditions, we define three stylized impact scenarios. These scenarios are directly associated with the value assigned to parameter $L$ during the experiments and are tied to Peniche's 22-million-euro economy:
+
+    \begin{itemize}
+        \item \textbf{Low Impact (L = 4.4; 20\% of $I$):} Scenarios where the implementation of the wind farm causes minimal alterations to
+          coastal dynamics; the wave profile of the region is preserved, and the community continues to enjoy the surf peak almost
+          unchanged.
+        \item \textbf{Medium Impact (L = 8.8; 40\% of $I$):} Scenarios where the implementation causes perceptible alterations in coastal
+          dynamics. Consequently, the local wave profile is altered, and part of the community is prevented from enjoying the surf
+          peak, at least temporarily.
+        \item \textbf{High Impact (L = 19.8; 90\% of $I$):} Scenarios where the implementation drastically alters coastal dynamics to the point
+          of characterizing total inviability of surfing practice. \warn{The waves become inappropriate for the relevant surf-tourism use, placing most of the benchmarked local GVA at risk.}
+    \end{itemize}
+
+These impact scenarios give $L$ a distinct methodological role. In the article, $L$ defines the substantive impact scenarios because it expresses the estimated scale of damage to the local surf-tourism economy. The remaining parameters are treated as sensitivity dimensions because they capture legal uncertainty, compensation design, transaction costs, and procedural frictions whose effects may vary across institutional settings.
+
+\subsection{Experimental Design}
+
+The experiments are generated by repeated evaluation of the normal-form game over discretized parameter grids. For the baseline heatmaps, the payoff matrix is evaluated over a regular two-dimensional grid with 100 values for $P$ in the interval $[0,1]$ and 100 values for $G$ in the interval $[0,1.5L]$, producing 10,000 parameter combinations for each impact scenario. For each combination, the payoffs are calculated from Equations \ref{eq:g1} and \ref{eq:g2}, and the resulting strategic outcome is classified by best-response intersection.
+
+Operationally, a cell is labeled as a pure-strategy Nash equilibrium when a strategic combination is simultaneously a best response for both players. When no strategic cell satisfies that condition, the parameter combination is classified as \textit{Absence of Pure Equilibrium}. The heatmaps therefore represent the equilibrium class associated with each point in the $(P,G)$ space, while the area-evolution figures report how the relative share of those classes changes when a third parameter is varied.
+
+The additional sensitivity analyses follow the same logic. In the figures on legal-cost variation, the payoff matrix is recomputed over the full $(P,G)$ grid while varying one parameter at a time. \verify{In the implementation used to generate the figures, stakeholder litigation cost is varied from $-50\%$ to $+50\%$ around a base value in steps of 5\%, while offshore litigation cost and delay cost are varied over 21 equally spaced values in the interval $[0,R]$.} The price-of-conflict and cost-comparison figures operate as complementary slices of the same model, isolating the interaction between specific parameters of substantive interest.
+
+Each experimental block is tied to a specific methodological purpose. The $(P,G)$ heatmap evaluates the interaction between legal uncertainty and compensation. The $P \times G \times C_a$ area analyses examine how stakeholder mobilization cost changes the strategic composition of the grid. The $P \times G \times L$ analysis evaluates how expected local damage compresses the region of negotiated coexistence. The $G \times L$ heatmap isolates the relation between compensation and anticipated damage. The $P \times G \times LR$ analysis measures the effect of delay on offshore willingness to sustain conflict, and the $C_a \times C_s$ heatmaps compare the asymmetry of legal endurance between the two sides.
+
+\section{Analysis and Interpretation}
+\label{sec_evaluation}
+
+This section interprets the experiments as answers to the article's central research question: under what conditions does the interaction between offshore wind proponents and surf-tourism stakeholders in Peniche lead to acceptance, litigation, or strategic instability? The results are organized around that logic. The first group of analyses identifies when compensation and legal uncertainty favor acceptance or conflict. The second group examines how local loss and litigation costs expand or compress the conflict region. The final analyses isolate two additional mechanisms of interest: delay as a source of instability and the asymmetry of financial endurance between the two sides.
+
+\subsection{Comparing the two largest uncertainties}
+
+The analysis begins with a baseline scenario governed by the two most critical sources of strategic uncertainty: the probability of the consortium's judicial success ($P$) and the financial compensation offered to stakeholders ($G$). By mapping the interplay between legal risk and compensatory incentives, the resulting heatmap establishes the primary decision matrix and reflects how real-world resolutions unfold under asymmetric conditions.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/grafico1.png}
+    \caption{Heatmap $P$ x $G$ (Low Impact)}
+    \label{fig:grafico1}
+\end{figure}
+
+The heatmap reveals a clear bifurcation between negotiated coexistence (Implement / Accept) and chronic litigation (Implement / Fight). In descriptive terms, the transition between these regions is not governed by compensation alone. It depends on the joint effect of compensation ($G$) and the perceived probability of offshore success ($P$), which means that the same level of compensation can sustain different outcomes under different legal expectations. The thin band of \textit{Absence of Pure Equilibrium} at very low values of $P$ also indicates that, when the offshore side is perceived as having almost no chance of prevailing, the game becomes harder to stabilize even before a pure conflict equilibrium fully dominates.
+
+This pattern is consistent with Equation \ref{eq:opponent_condition}, according to which resistance remains rational when mobilization cost is outweighed by expected loss and expected compensation. In the present parametrization, compensation does not simply buy acceptance. Because $G$ enters the local conflict payoff, higher compensation also cushions the downside of resisting and losing, which helps explain why the litigation region expands as $G$ rises when $P$ is low. By contrast, when the legal framework and institutional context strongly favor the energy consortium (high $P$), the local bargaining position is weakened and acceptance occupies a larger portion of the parameter space even at lower values of $G$. This interpretation is also compatible with the broader literature reviewed earlier, which emphasizes that the effects of offshore wind on tourism and recreation are heterogeneous and context-dependent rather than uniform across settings \citep{machado_implications_2023,trandafir_how_2020,smythe_beyond_2020}. In the present model, litigation emerges as a rational response when expected local loss remains salient, institutional protection is perceived as uncertain, and compensation softens the expected cost of fighting rather than eliminating the incentive to resist.
+
+
+
+\subsection{The impact of legal costs on stakeholders}
+
+The next step is to evaluate the limits of a war of attrition through a sensitivity analysis of the community's mobilization and legal costs ($C_a$) across the three impact scenarios ($L$: Low, Medium, and High). This analysis demonstrates mathematically how the financial barrier to sustaining a prolonged legal battle influences the resilience of local resistance and may benefit the offshore consortium.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/grafico2.png}
+    \caption{Area Evolution $P$ x $G$ x $C_a$ (Low Impact)}
+    \label{fig:grafico2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/grafico3.png}
+    \caption{Area Evolution $P$ x $G$ x $C_a$ (Medium Impact)}
+    \label{fig:grafico3}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/grafico4.png}
+    \caption{Area Evolution $P$ x $G$ x $C_a$ (High Impact)}
+    \label{fig:grafico4}
+\end{figure}
+
+The area-evolution graphs show that increasing $C_a$ generally reduces the share of the parameter space in which litigation is sustainable. Descriptively, the negotiated region expands as the financial burden of mobilization increases, which means that higher stakeholder costs progressively shrink the conditions under which Fight remains a best response. Read together, the three curves also show that the critical value of $C_a$ required to displace conflict is not constant. It rises sharply as the expected local impact moves from Low to Medium and especially to High.
+
+This behavior follows directly from Equation \ref{eq:opponent_condition}: as $C_a$ increases, the inequality favoring resistance becomes harder to satisfy unless expected loss or compensation also increases. The comparative insight emerges when the three impact scenarios are read together. In a low-impact scenario, even modest legal costs are sufficient to make agreement more attractive, because the expected local damage does not justify the burden of conflict. In the medium-impact scenario, the transition is delayed and more gradual, indicating that resistance remains viable over a wider range of mobilization costs. Under a high-impact scenario, however, the deterrent effect of legal cost weakens substantially. Once expected local loss becomes large enough, prolonged litigation remains strategically preferable across most of the grid, and only very high values of $C_a$ restore negotiated coexistence as the dominant outcome. This is one of the clearest points at which the article's results connect local economic exposure to strategic behavior rather than descriptive opposition alone.
+
+\subsection{Economic impact and its influence}
+
+We then test the boundaries of the bargaining framework through a sensitivity analysis in which the estimated local economic impact ($L$) is the primary independent variable. This analysis aims to determine whether there is a critical threshold of economic destruction that renders a negotiated agreement structurally impossible, irrespective of the financial compensation offered ($G$) or the consortium's probability of judicial success ($P$).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/grafico5.png}
+    \caption{Area Evolution $P$ x $G$ x $L$}
+    \label{fig:grafico5}
+\end{figure}
+
+The area-evolution graph shows that the strategic region corresponding to negotiated agreement contracts rapidly as expected local impact intensifies. In descriptive terms, the model shifts from a mixed space in which both acceptance and conflict are possible to a space increasingly dominated by litigation as $L$ approaches $I$. The transition is not merely linear or gradual. The steep early decline of the acceptance region indicates a threshold effect: once anticipated damage reaches a moderate share of the local economic base, the bargaining space is quickly reorganized in favor of conflict, after which additional increases in $L$ mostly consolidate a litigation-dominated structure.
+
+This is the result most directly tied to the article's surf-tourism vulnerability argument. Through Equation \ref{eq:opponent_condition}, larger values of $L$ systematically increase the range of conditions under which resistance is rational. Within the model, this means that severe expected damage makes conflict harder to defuse, even when other parameters remain unchanged. The finding is consistent with the broader framing adopted here: if the disputed asset is a specific environmental condition that anchors recurrent economic activity, then severe losses are not easily reducible to a standard compensatory transaction. In that sense, the model does not merely show that economic damage matters; it shows that the magnitude of expected damage reorganizes the entire bargaining space and makes negotiated coexistence structurally fragile beyond a relatively limited impact range.
+
+\subsection{The price of conflict for the offshore}
+
+From a regulatory and financial viability perspective, it is also useful to relate the estimated local economic impact ($L$) directly to the financial compensation offered ($G$). The resulting heatmap yields a visual representation of the conflict's underlying bargaining frontier, showing how combinations of anticipated damage and compensation alter the strategic outcome.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/grafico6.png}
+    \caption{Heatmap $G$ x $L$}
+    \label{fig:grafico6}
+\end{figure}
+
+The generated graph exhibits a stark linear demarcation between the two strategic outcomes. Descriptively, the figure isolates the interaction between the expected local damage $L$ and the compensation level $G$, without the added visual complexity of the other parameters. This makes it one of the clearest presentations of the model's bargaining logic. Just as importantly, the figure shows no visible instability band in this slice of the model, which means that the parameter combination is resolved almost entirely into either acceptance or litigation.
+
+In formal terms, the figure can be read as a strategic frontier under the adopted assumptions. Because $G$ enters Equation \ref{eq:opponent_condition} as part of the expected payoff from resisting, higher compensation does not mechanically produce acceptance in this specification. Instead, the figure shows that acceptance is sustained only where expected local damage remains sufficiently limited relative to the compensation term, whereas larger values of $L$ combined with larger values of $G$ still support litigation by reducing the expected downside of fighting and losing. This result is especially relevant for the article's applied contribution: it translates the conflict into a condition that is legible not only in game-theoretic terms, but also in terms of compensation design and project viability. It also complements the tourism literature reviewed earlier by moving from heterogeneous behavioral effects to an explicit strategic condition under which the relation between damage and compensation can still fail to deliver agreement.
+
+\subsection{Effects on the decision due to project delay}
+
+Large-scale offshore infrastructure projects are notoriously susceptible to major financial losses resulting from operational and procedural delays. Against that background, this sensitivity analysis evaluates the consortium's tolerance for protracted friction with the local population by varying the expected reduction in offshore returns due to delays ($LR$).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/grafico7.png}
+    \caption{Area Evolution $P$ x $G$ x $LR$ (Low Impact)}
+    \label{fig:grafico7}
+\end{figure}
+
+The delay analysis shows that increases in $LR$ do not merely reduce offshore payoff; they can alter the structure of the strategic outcome itself. Descriptively, the expansion of the region classified as \textit{Absence of Pure Equilibrium} indicates that the game becomes harder to stabilize in pure strategies as delay cost grows. At the same time, the acceptance region remains nearly flat over most of the range, which means that delay does not substantially reward negotiated coexistence. It primarily compresses the conflict region.
+
+This pattern follows from Equation \ref{eq:offshore_condition}, because larger values of $LR$ reduce the parameter space in which implementation under conflict remains attractive to the offshore side. The result is methodologically important because it identifies a mechanism different from those observed in the compensation and loss analyses. Whereas $L$ and $G$ primarily reshape the accept-versus-fight decision on the local side, $LR$ acts directly on the offshore side's willingness to remain in conflict. Within the model, procedural delay therefore appears not merely as an administrative obstacle, but as an asymmetric bargaining mechanism capable of generating instability even without local legal victory on the merits. In other words, delay weakens the offshore coalition's ability to sustain a pure conflict equilibrium more than it strengthens the conditions for stable agreement.
+
+\subsection{The costs of the fight for both sides}
+
+Finally, to examine the dynamics of a war of attrition from both sides, this sensitivity analysis compares the legal and mobilization costs incurred by the community ($C_a$) with those borne by the energy consortium ($C_s$). It evaluates which side becomes more financially constrained across the impact scenarios.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/grafico8.png}
+    \caption{Heatmap $C_a$ x $C_s$ (Low Impact)}
+    \label{fig:grafico8}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/grafico9.png}
+    \caption{Heatmap $C_a$ x $C_s$ (High Impact)}
+    \label{fig:grafico9}
+\end{figure}
+
+The cost-comparison heatmaps show a marked asymmetry in financial endurance between the two sides. In descriptive terms, increasing the consortium's legal cost $C_s$ has a limited effect across broad parts of the parameter space, whereas changes in stakeholder mobilization cost $C_a$ more readily alter the equilibrium composition of the grid. In the Low Impact scenario, once $C_a$ crosses a relatively modest threshold, acceptance dominates almost regardless of the value of $C_s$. In the High Impact scenario, by contrast, that threshold shifts substantially to the right, and conflict remains viable over a much larger portion of the grid.
+
+This asymmetry is analytically important because it clarifies who can credibly sustain conflict under different conditions. Given the size of $R$ in the adopted calibration, the offshore coalition remains comparatively resilient to increases in legal cost. Moreover, when $C_s$ rises while $C_a$ remains low, the model tends first to generate instability rather than agreement, which indicates that making conflict expensive for the consortium is not, by itself, enough to secure negotiated coexistence. By contrast, the local side is more vulnerable to financial exhaustion unless expected damage is sufficiently high to keep Equation \ref{eq:opponent_condition} satisfied over a wider range of cases. Under the High Impact scenario, the litigation region expands markedly, which means that local actors become much less sensitive to legal cost when the expected loss threatens the economic basis of surf-tourism. This result reinforces one of the central claims of the paper: institutional fragility matters, but severe expected loss can still make resistance strategically robust.
+
+\section{Conclusion}
+\label{sec_conclusion}
+
+This article asks under what conditions the interaction between offshore wind proponents and surf-tourism stakeholders in Peniche leads to acceptance, litigation, or strategic instability. The model and experiments suggest a structured answer. Acceptance becomes more plausible when expected local damage is limited, compensation is sufficient, and the legal setting is perceived as favorable to offshore implementation. Litigation becomes more robust when expected local loss grows and the local side still sees resistance as a rational response under Equation \ref{eq:opponent_condition}. Strategic instability emerges most clearly when delay erodes the offshore coalition's expected return enough to weaken the conditions sustaining implementation under conflict. Under the adopted parameterization, the central conclusion is therefore not simply that conflict may occur, but that conflict can remain strategically stable even when negotiated acceptance would be socially preferable.
+
+Three findings are especially relevant. First, compensation does not operate independently of context: its effectiveness depends on expected local damage and on the perceived legal position of each side. Second, the expected magnitude of local loss is the main factor compressing the space for negotiated coexistence, because severe damage makes litigation rational across a much wider range of scenarios. Third, delay matters not only as an administrative inconvenience, but as a strategic variable capable of eroding offshore returns and generating regions of instability. Taken together, these findings reinforce the article's central analytical point: in this type of coastal-use conflict, the outcome that is strategically stable for the players need not coincide with the outcome that is collectively preferable.
+
+Methodologically, the article contributes a parsimonious game-theoretic model of a coastal-use conflict that links strategic choices to interpretable legal and economic parameters, and that makes explicit how compensation, expected loss, litigation cost, and delay reshape the equilibrium structure of the dispute. Applied to Peniche, the model shows how a surf-based local economy may remain structurally exposed even when a negotiated outcome would produce a better aggregate result than conflict. The model remains intentionally simplified: it aggregates heterogeneous actors, treats the dispute as static, and does not represent sequential licensing dynamics or coalition fragmentation. These limits define the scope within which the present findings should be interpreted. Even so, the results support a broader governance implication consistent with the abstract and introduction: coexistence between offshore deployment and surf-based coastal economies depends not only on technical project feasibility, but also on institutional representation, compensation design, and procedural conditions capable of reducing strategically persistent conflict.
+
+
+\section*{Acknowledgements}
+
+The article integrates materials prepared in the broader research effort on offshore wind, surfing, tourism, and game theory in Portugal and Brazil.
+
+\bibliographystyle{elsarticle-harv}
+\bibliography{references}
+
+\end{document}
