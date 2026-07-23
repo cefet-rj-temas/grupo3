@@ -51,4 +51,3 @@ rsconnect/
 # Simulation Data
 *.csv
 !simulation/outputs/*.csv
-!manuscript/generated_outputs/*.csv

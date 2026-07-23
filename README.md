@@ -1,8 +1,8 @@
-# Offshore Wind and Surf-Tourism Game Model
+# Offshore Wind and Surf-Tourism Game Model Artifact
 
-This repository is the organized submission package for the article **"Negotiating Offshore Wind and Surf-Tourism Interests: A Peniche-Based Game-Theoretic Model"**.
+This repository contains the organized data, simulation code, parameter audit, and supporting documentation for the article **"Negotiating Offshore Wind and Surf-Tourism Interests: A Peniche-Based Game-Theoretic Model"**.
 
-The active package is intentionally small. Files that are not part of the manuscript, model execution, parameter audit, or article support material were preserved under `legacy/original_workspace/`.
+The manuscript itself is maintained outside this repository in the paper working directory. This artifact repository should not contain a duplicate manuscript copy. Files that are not part of the active model execution, parameter audit, or article support material were preserved under `legacy/original_workspace/`.
 
 ## Repository Map
 
@@ -11,34 +11,6 @@ The active package is intentionally small. Files that are not part of the manusc
 - `.gitignore` - repository ignore rules.
 - `LICENSE` - repository license.
 - `README.md` - this repository guide.
-
-### Manuscript
-
-- `manuscript/main.tex` - journal manuscript source.
-- `manuscript/references.bib` - BibTeX database used by the manuscript.
-- `manuscript/main.bbl` - compiled bibliography file produced by BibTeX.
-- `manuscript/main.pdf` - compiled manuscript PDF.
-- `manuscript/README.md` - manuscript folder guide.
-- `manuscript/elsarticle-harv.bst` - bibliography style used by the manuscript.
-- `manuscript/elsarticle-num.bst` - additional Elsevier bibliography style kept for submission compatibility.
-- `manuscript/elsarticle-num-names.bst` - additional Elsevier bibliography style kept for submission compatibility.
-- `manuscript/images/grafico1.png` - article figure.
-- `manuscript/images/grafico2.png` - article figure.
-- `manuscript/images/grafico3.png` - article figure.
-- `manuscript/images/grafico4.png` - article figure.
-- `manuscript/images/grafico5.png` - article figure.
-- `manuscript/images/grafico6.png` - article figure.
-- `manuscript/images/grafico7.png` - article figure.
-- `manuscript/images/grafico8.png` - article figure.
-- `manuscript/images/grafico9.png` - article figure.
-- `manuscript/generated_outputs/README.md` - generated-output note.
-- `manuscript/generated_outputs/baseline_payoff_matrix.csv` - mirrored baseline payoff matrix.
-- `manuscript/generated_outputs/model_parameters.csv` - mirrored parameter table.
-- `manuscript/generated_outputs/peniche_tourism_series.csv` - mirrored Peniche tourism series.
-- `manuscript/generated_outputs/sensitivity_grid.csv` - mirrored sensitivity grid.
-- `manuscript/generated_outputs/sensitivity_summary.csv` - mirrored sensitivity summary.
-- `manuscript/generated_outputs/fight_preference_heatmap.png` - mirrored fight-preference heatmap.
-- `manuscript/generated_outputs/peniche_tourism_indicators.png` - mirrored tourism-indicator figure.
 
 ### Simulation
 
@@ -86,18 +58,7 @@ The active package is intentionally small. Files that are not part of the manusc
 ### Legacy
 
 - `legacy/original_workspace/` - previous working tree, including older article drafts, raw vault material, old folder names, and files not needed in the active submission package.
-- `legacy/build_artifacts/` - auxiliary build files moved out of the active manuscript package.
-
-## Build the Manuscript
-
-From `manuscript/`:
-
-```powershell
-pdflatex -interaction=nonstopmode main.tex
-bibtex main
-pdflatex -interaction=nonstopmode main.tex
-pdflatex -interaction=nonstopmode main.tex
-```
+- `legacy/build_artifacts/` - auxiliary build files kept only for historical traceability.
 
 ## Run the Main Simulation Workflow
 
@@ -111,4 +72,4 @@ The workflow reads `data/peniche_decision_model_workbook.xlsx` and writes regene
 
 ## Current Audit Note
 
-The manuscript currently uses a Peniche/WSL calibration (`I=22`, `Cs=2`, `alpha=0.1`). Some mirrored CSV outputs in `manuscript/generated_outputs/` reflect the older worksheet calibration (`I=10`, `Cs=3`, `alpha=0`). This mismatch is documented in `documentation/parameter_audit.md` and should be resolved before final submission by regenerating figures and traceability outputs with the final approved parameters.
+The article currently uses a Peniche/WSL calibration (`I=22`, `Cs=2`, `alpha=0.1`). The regenerated outputs in `simulation/outputs/` still reflect the workbook calibration unless the workbook itself is updated. This parameter status is documented in `documentation/parameter_audit.md`.
