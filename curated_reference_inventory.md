@@ -1,6 +1,6 @@
 # Curated Reference Inventory
 
-This file summarizes the reference groups considered relevant to the article. The full historical PDF vault is preserved under `legacy/original_workspace/`; the active manuscript cites the bibliographic records in `manuscript/references.bib`.
+This file summarizes the reference groups considered relevant to the article. The full historical PDF vault is preserved under `legacy/original_workspace/`; the active manuscript cites the bibliographic records in the separate article repository.
 
 ## Core Source Groups
 
@@ -14,4 +14,4 @@ This file summarizes the reference groups considered relevant to the article. Th
 
 ## Active Bibliographic Control
 
-The authoritative citation list for the article is `manuscript/references.bib`. This inventory is only a navigation aid for the supporting literature.
+The authoritative citation list remains the manuscript's `references.bib` file in the article repository. This inventory is only a navigation aid for the supporting literature.

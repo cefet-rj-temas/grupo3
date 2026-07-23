@@ -22,7 +22,7 @@ The model does not estimate hydrodynamic damage directly. Instead, it represents
 - medium impact: the wave profile or user profile is materially altered;
 - high impact: surf-tourism use becomes largely nonviable.
 
-These scenarios require author confirmation because they are modelling assumptions, not measured physical impacts.
+These scenarios are modelling assumptions, not measured physical impacts. The current article treats them as stylized sensitivity settings tied to Peniche's surf-related GVA benchmark.
 
 ## Litigation and Compensation
 
@@ -30,8 +30,8 @@ The notes treat local litigation as a mobilization effort likely carried by an a
 
 The article therefore keeps compensation as a strategic parameter (`G`) rather than treating it as a settled administrative payment.
 
-## Remaining Calibration Questions
+## Active Calibration Decisions
 
-- Confirm whether Player 2 should formally include WSL or whether WSL should be used only as an empirical reference.
-- Confirm whether `P` means judicial success narrowly or broader institutional success.
-- Confirm the calibration rationale for `LR=20`, `Cs=2`, and `alpha=0.1`.
+- Player 2 is a hypothetical surf-tourism coalition. WSL is used as an empirical reference and a possible member of such a coalition, not as a required formal representative.
+- `P` means reduced-form institutional success, including licensing, legal, technical-contestation, and implementation dimensions.
+- `LR=20`, `Cs=2`, and `alpha=0.1` are normalized scenario values used for sensitivity interpretation, not independently observed estimates.

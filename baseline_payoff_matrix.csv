@@ -1,0 +1,5 @@
+offshore_action,surf_action,offshore_payoff,surf_payoff,total_payoff,better_for_offshore,better_for_surf,is_nash,is_pareto_max
+Implement,Accept,100.0,17.6,117.6,True,False,False,True
+Implement,Fight,35.8,19.0,54.8,True,True,True,False
+Withdraw,Accept,0.0,22.0,22.0,False,True,False,False
+Withdraw,Fight,0.0,21.7,21.7,False,False,False,False

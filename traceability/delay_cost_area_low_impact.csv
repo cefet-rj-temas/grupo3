@@ -1,0 +1,106 @@
+variable,value,equilibrium,area_percent
+LR,0.0,Implement / Accept,21.32
+LR,0.0,Implement / Fight,75.84
+LR,0.0,Withdraw / Accept,0.0
+LR,0.0,Withdraw / Fight,0.0
+LR,0.0,Absence of Pure Equilibrium,2.8400000000000003
+LR,5.0,Implement / Accept,21.32
+LR,5.0,Implement / Fight,75.68
+LR,5.0,Withdraw / Accept,0.0
+LR,5.0,Withdraw / Fight,0.0
+LR,5.0,Absence of Pure Equilibrium,3.0
+LR,10.0,Implement / Accept,21.32
+LR,10.0,Implement / Fight,75.68
+LR,10.0,Withdraw / Accept,0.0
+LR,10.0,Withdraw / Fight,0.0
+LR,10.0,Absence of Pure Equilibrium,3.0
+LR,15.0,Implement / Accept,21.32
+LR,15.0,Implement / Fight,75.68
+LR,15.0,Withdraw / Accept,0.0
+LR,15.0,Withdraw / Fight,0.0
+LR,15.0,Absence of Pure Equilibrium,3.0
+LR,20.0,Implement / Accept,21.32
+LR,20.0,Implement / Fight,75.68
+LR,20.0,Withdraw / Accept,0.0
+LR,20.0,Withdraw / Fight,0.0
+LR,20.0,Absence of Pure Equilibrium,3.0
+LR,25.0,Implement / Accept,21.32
+LR,25.0,Implement / Fight,75.68
+LR,25.0,Withdraw / Accept,0.0
+LR,25.0,Withdraw / Fight,0.0
+LR,25.0,Absence of Pure Equilibrium,3.0
+LR,30.0,Implement / Accept,21.32
+LR,30.0,Implement / Fight,75.29
+LR,30.0,Withdraw / Accept,0.0
+LR,30.0,Withdraw / Fight,0.0
+LR,30.0,Absence of Pure Equilibrium,3.39
+LR,35.0,Implement / Accept,21.32
+LR,35.0,Implement / Fight,74.68
+LR,35.0,Withdraw / Accept,0.0
+LR,35.0,Withdraw / Fight,0.0
+LR,35.0,Absence of Pure Equilibrium,4.0
+LR,40.0,Implement / Accept,21.32
+LR,40.0,Implement / Fight,74.68
+LR,40.0,Withdraw / Accept,0.0
+LR,40.0,Withdraw / Fight,0.0
+LR,40.0,Absence of Pure Equilibrium,4.0
+LR,45.0,Implement / Accept,21.32
+LR,45.0,Implement / Fight,74.51
+LR,45.0,Withdraw / Accept,0.0
+LR,45.0,Withdraw / Fight,0.0
+LR,45.0,Absence of Pure Equilibrium,4.17
+LR,50.0,Implement / Accept,21.32
+LR,50.0,Implement / Fight,73.76
+LR,50.0,Withdraw / Accept,0.0
+LR,50.0,Withdraw / Fight,0.0
+LR,50.0,Absence of Pure Equilibrium,4.92
+LR,55.0,Implement / Accept,21.32
+LR,55.0,Implement / Fight,73.5
+LR,55.0,Withdraw / Accept,0.0
+LR,55.0,Withdraw / Fight,0.0
+LR,55.0,Absence of Pure Equilibrium,5.18
+LR,60.0,Implement / Accept,21.32
+LR,60.0,Implement / Fight,72.75
+LR,60.0,Withdraw / Accept,0.0
+LR,60.0,Withdraw / Fight,0.0
+LR,60.0,Absence of Pure Equilibrium,5.93
+LR,65.0,Implement / Accept,21.32
+LR,65.0,Implement / Fight,71.99
+LR,65.0,Withdraw / Accept,0.0
+LR,65.0,Withdraw / Fight,0.0
+LR,65.0,Absence of Pure Equilibrium,6.69
+LR,70.0,Implement / Accept,21.32
+LR,70.0,Implement / Fight,70.73
+LR,70.0,Withdraw / Accept,0.0
+LR,70.0,Withdraw / Fight,0.0
+LR,70.0,Absence of Pure Equilibrium,7.95
+LR,75.0,Implement / Accept,21.32
+LR,75.0,Implement / Fight,68.97
+LR,75.0,Withdraw / Accept,0.0
+LR,75.0,Withdraw / Fight,0.0
+LR,75.0,Absence of Pure Equilibrium,9.71
+LR,80.0,Implement / Accept,21.32
+LR,80.0,Implement / Fight,66.16
+LR,80.0,Withdraw / Accept,0.0
+LR,80.0,Withdraw / Fight,0.0
+LR,80.0,Absence of Pure Equilibrium,12.520000000000001
+LR,85.0,Implement / Accept,21.32
+LR,85.0,Implement / Fight,60.78
+LR,85.0,Withdraw / Accept,0.0
+LR,85.0,Withdraw / Fight,0.0
+LR,85.0,Absence of Pure Equilibrium,17.9
+LR,90.0,Implement / Accept,21.32
+LR,90.0,Implement / Fight,45.73
+LR,90.0,Withdraw / Accept,0.0
+LR,90.0,Withdraw / Fight,0.0
+LR,90.0,Absence of Pure Equilibrium,32.95
+LR,95.0,Implement / Accept,21.32
+LR,95.0,Implement / Fight,0.0
+LR,95.0,Withdraw / Accept,0.0
+LR,95.0,Withdraw / Fight,0.0
+LR,95.0,Absence of Pure Equilibrium,78.68
+LR,100.0,Implement / Accept,21.32
+LR,100.0,Implement / Fight,0.0
+LR,100.0,Withdraw / Accept,0.0
+LR,100.0,Withdraw / Fight,0.0
+LR,100.0,Absence of Pure Equilibrium,78.68

@@ -6,16 +6,16 @@ This note records the audit performed against the current paper draft, the `grup
 
 - `manuscript/main.tex`
 - `manuscript/references.bib`
-- `manuscript/generated_outputs/model_parameters.csv`
-- `manuscript/generated_outputs/baseline_payoff_matrix.csv`
-- `simulation/r/run_peniche_offshore_analysis.R`
-- `simulation/python/*.py`
-- `data/model_parameter_source_notes.md`
+- `model_parameters.csv`
+- `baseline_payoff_matrix.csv`
+- `run_peniche_offshore_analysis.py`
+- `offshore_model_exploration.ipynb`
+- `model_parameter_source_notes.md`
 - `data/peniche_decision_model_sheet.tsv`
 
 ## Main Finding
 
-The current article uses the Peniche/WSL calibration (`I=22`, `Cs=2`, `alpha=0.1`), but the mirrored CSVs currently stored in `manuscript/generated_outputs/` still reflect the older worksheet calibration (`I=10`, `Cs=3`, `alpha=0`). The paper now marks the remaining calibration choices that need author confirmation.
+The current article uses a Peniche/WSL order-of-magnitude calibration. The active Python simulation workflow now applies the manuscript calibration directly before writing outputs. The former worksheet values (`I=10`, `Cs=3`, `alpha=0`) are retained only as historical source material in the workbook and legacy files; they are not the active article calibration.
 
 ## Parameter Status
 
@@ -23,13 +23,13 @@ The current article uses the Peniche/WSL calibration (`I=22`, `Cs=2`, `alpha=0.1
 | --- | --- | --- |
 | `I` | `22`, order-of-magnitude surf-related GVA benchmark | Supported by the WSL/ISEG material and cited in the paper. |
 | `R` | `100`, normalized offshore gross return | Treated as a modelling scale, with Portuguese offshore investment magnitude cited. |
-| `LR` | `20`, delay/concession/reduction in offshore return | Plausible as a scenario value, but not independently estimated; marked for verification. |
-| `Cs` | `2`, offshore litigation/transaction cost | Not independently sourced; marked for verification. |
-| `Ca` | varied from `0` to `I` and in sensitivity ranges | Methodological sensitivity parameter; implementation should be checked against scripts. |
+| `LR` | `20`, delay/concession/reduction in offshore return | Normalized scenario value used for sensitivity interpretation; not an observed estimate. |
+| `Cs` | `2`, offshore litigation/transaction cost | Normalized scenario value used for sensitivity interpretation; not an observed estimate. |
+| `Ca` | varied from `0` to `I` and in sensitivity ranges | Methodological sensitivity parameter implemented in the active workflow. |
 | `G` | varied over compensation grids | Methodological sensitivity parameter; compensation design is supported conceptually by legal and tourism sources. |
-| `P` | probability offshore side prevails | Reduced-form uncertainty parameter; legal/institutional interpretation remains open and is marked for verification. |
-| `alpha` | `0.1` residual contestation-cost share | Not independently sourced; marked for verification. |
-| `L` | stylized impact scenarios of 20%, 40%, and 90% of `I` | Scenario design, not empirical hydrodynamic estimates; high-impact wording was softened and marked. |
+| `P` | probability offshore side prevails institutionally | Reduced-form uncertainty parameter covering licensing, legal, technical-contestation, and implementation dimensions. |
+| `alpha` | `0.1` residual contestation-cost share | Normalized scenario value used for sensitivity interpretation; not an observed estimate. |
+| `L` | stylized impact scenarios of 20%, 40%, and 90% of `I` | Scenario design, not empirical hydrodynamic estimates. |
 
 ## Sources Added or Checked
 
@@ -44,7 +44,7 @@ The current article uses the Peniche/WSL calibration (`I=22`, `Cs=2`, `alpha=0.1
 
 ## Remaining Work
 
-- Regenerate the figures and CSV traceability files from the same parameterization used in the paper.
-- Confirm whether Player 2 should formally include WSL or whether WSL should be treated only as an empirical source/proxy.
-- Confirm whether `P` means judicial success narrowly or broader institutional success.
-- Confirm the intended calibration basis for `LR=20`, `Cs=2`, and `alpha=0.1`.
+- Keep the generated outputs synchronized whenever the manuscript calibration changes.
+- Treat Player 2 as a hypothetical surf-tourism coalition; WSL is an empirical reference and possible coalition member, not a required formal representative.
+- Treat `P` as broader institutional success rather than judicial success alone.
+- Report `LR=20`, `Cs=2`, and `alpha=0.1` as normalized scenario values, not as independently observed estimates.

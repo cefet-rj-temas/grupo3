@@ -48,6 +48,7 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
-# Simulation Data
+# Generated article data kept for reproducibility
 *.csv
-!simulation/outputs/*.csv
+!/*.csv
+!traceability/*.csv

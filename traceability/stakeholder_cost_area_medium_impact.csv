@@ -1,0 +1,106 @@
+variable,value,equilibrium,area_percent,variation_percent
+Ca,1.5,Implement / Accept,1.15,-50
+Ca,1.5,Implement / Fight,95.85000000000001,-50
+Ca,1.5,Withdraw / Accept,0.0,-50
+Ca,1.5,Withdraw / Fight,0.0,-50
+Ca,1.5,Absence of Pure Equilibrium,3.0,-50
+Ca,1.6500000000000001,Implement / Accept,1.39,-45
+Ca,1.6500000000000001,Implement / Fight,95.61,-45
+Ca,1.6500000000000001,Withdraw / Accept,0.0,-45
+Ca,1.6500000000000001,Withdraw / Fight,0.0,-45
+Ca,1.6500000000000001,Absence of Pure Equilibrium,3.0,-45
+Ca,1.7999999999999998,Implement / Accept,1.6400000000000001,-40
+Ca,1.7999999999999998,Implement / Fight,95.36,-40
+Ca,1.7999999999999998,Withdraw / Accept,0.0,-40
+Ca,1.7999999999999998,Withdraw / Fight,0.0,-40
+Ca,1.7999999999999998,Absence of Pure Equilibrium,3.0,-40
+Ca,1.9500000000000002,Implement / Accept,1.92,-35
+Ca,1.9500000000000002,Implement / Fight,95.08,-35
+Ca,1.9500000000000002,Withdraw / Accept,0.0,-35
+Ca,1.9500000000000002,Withdraw / Fight,0.0,-35
+Ca,1.9500000000000002,Absence of Pure Equilibrium,3.0,-35
+Ca,2.0999999999999996,Implement / Accept,2.2399999999999998,-30
+Ca,2.0999999999999996,Implement / Fight,94.76,-30
+Ca,2.0999999999999996,Withdraw / Accept,0.0,-30
+Ca,2.0999999999999996,Withdraw / Fight,0.0,-30
+Ca,2.0999999999999996,Absence of Pure Equilibrium,3.0,-30
+Ca,2.25,Implement / Accept,2.56,-25
+Ca,2.25,Implement / Fight,94.44,-25
+Ca,2.25,Withdraw / Accept,0.0,-25
+Ca,2.25,Withdraw / Fight,0.0,-25
+Ca,2.25,Absence of Pure Equilibrium,3.0,-25
+Ca,2.4000000000000004,Implement / Accept,2.93,-20
+Ca,2.4000000000000004,Implement / Fight,94.07,-20
+Ca,2.4000000000000004,Withdraw / Accept,0.0,-20
+Ca,2.4000000000000004,Withdraw / Fight,0.0,-20
+Ca,2.4000000000000004,Absence of Pure Equilibrium,3.0,-20
+Ca,2.55,Implement / Accept,3.3099999999999996,-15
+Ca,2.55,Implement / Fight,93.69,-15
+Ca,2.55,Withdraw / Accept,0.0,-15
+Ca,2.55,Withdraw / Fight,0.0,-15
+Ca,2.55,Absence of Pure Equilibrium,3.0,-15
+Ca,2.7,Implement / Accept,3.71,-10
+Ca,2.7,Implement / Fight,93.28999999999999,-10
+Ca,2.7,Withdraw / Accept,0.0,-10
+Ca,2.7,Withdraw / Fight,0.0,-10
+Ca,2.7,Absence of Pure Equilibrium,3.0,-10
+Ca,2.8499999999999996,Implement / Accept,4.14,-5
+Ca,2.8499999999999996,Implement / Fight,92.86,-5
+Ca,2.8499999999999996,Withdraw / Accept,0.0,-5
+Ca,2.8499999999999996,Withdraw / Fight,0.0,-5
+Ca,2.8499999999999996,Absence of Pure Equilibrium,3.0,-5
+Ca,3.0,Implement / Accept,4.62,0
+Ca,3.0,Implement / Fight,92.38,0
+Ca,3.0,Withdraw / Accept,0.0,0
+Ca,3.0,Withdraw / Fight,0.0,0
+Ca,3.0,Absence of Pure Equilibrium,3.0,0
+Ca,3.1500000000000004,Implement / Accept,5.1,5
+Ca,3.1500000000000004,Implement / Fight,91.9,5
+Ca,3.1500000000000004,Withdraw / Accept,0.0,5
+Ca,3.1500000000000004,Withdraw / Fight,0.0,5
+Ca,3.1500000000000004,Absence of Pure Equilibrium,3.0,5
+Ca,3.3000000000000003,Implement / Accept,5.64,10
+Ca,3.3000000000000003,Implement / Fight,91.36,10
+Ca,3.3000000000000003,Withdraw / Accept,0.0,10
+Ca,3.3000000000000003,Withdraw / Fight,0.0,10
+Ca,3.3000000000000003,Absence of Pure Equilibrium,3.0,10
+Ca,3.4499999999999997,Implement / Accept,6.15,15
+Ca,3.4499999999999997,Implement / Fight,90.85,15
+Ca,3.4499999999999997,Withdraw / Accept,0.0,15
+Ca,3.4499999999999997,Withdraw / Fight,0.0,15
+Ca,3.4499999999999997,Absence of Pure Equilibrium,3.0,15
+Ca,3.5999999999999996,Implement / Accept,6.76,20
+Ca,3.5999999999999996,Implement / Fight,90.24,20
+Ca,3.5999999999999996,Withdraw / Accept,0.0,20
+Ca,3.5999999999999996,Withdraw / Fight,0.0,20
+Ca,3.5999999999999996,Absence of Pure Equilibrium,3.0,20
+Ca,3.75,Implement / Accept,7.380000000000001,25
+Ca,3.75,Implement / Fight,89.62,25
+Ca,3.75,Withdraw / Accept,0.0,25
+Ca,3.75,Withdraw / Fight,0.0,25
+Ca,3.75,Absence of Pure Equilibrium,3.0,25
+Ca,3.9000000000000004,Implement / Accept,8.06,30
+Ca,3.9000000000000004,Implement / Fight,88.94,30
+Ca,3.9000000000000004,Withdraw / Accept,0.0,30
+Ca,3.9000000000000004,Withdraw / Fight,0.0,30
+Ca,3.9000000000000004,Absence of Pure Equilibrium,3.0,30
+Ca,4.050000000000001,Implement / Accept,8.72,35
+Ca,4.050000000000001,Implement / Fight,88.28,35
+Ca,4.050000000000001,Withdraw / Accept,0.0,35
+Ca,4.050000000000001,Withdraw / Fight,0.0,35
+Ca,4.050000000000001,Absence of Pure Equilibrium,3.0,35
+Ca,4.199999999999999,Implement / Accept,9.45,40
+Ca,4.199999999999999,Implement / Fight,87.55,40
+Ca,4.199999999999999,Withdraw / Accept,0.0,40
+Ca,4.199999999999999,Withdraw / Fight,0.0,40
+Ca,4.199999999999999,Absence of Pure Equilibrium,3.0,40
+Ca,4.35,Implement / Accept,10.17,45
+Ca,4.35,Implement / Fight,86.83,45
+Ca,4.35,Withdraw / Accept,0.0,45
+Ca,4.35,Withdraw / Fight,0.0,45
+Ca,4.35,Absence of Pure Equilibrium,3.0,45
+Ca,4.5,Implement / Accept,10.95,50
+Ca,4.5,Implement / Fight,86.05000000000001,50
+Ca,4.5,Withdraw / Accept,0.0,50
+Ca,4.5,Withdraw / Fight,0.0,50
+Ca,4.5,Absence of Pure Equilibrium,3.0,50

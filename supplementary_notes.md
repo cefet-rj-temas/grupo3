@@ -40,7 +40,7 @@ Open audit status:
 
 - The `I=22` benchmark is supported by the WSL/ISEG economic-impact material.
 - The exact recipient of compensation remains a modelling and institutional-design question, not a settled empirical fact.
-- The Player 2 coalition that combines local tourism representation and WSL still requires author confirmation.
+- Player 2 should be read as a hypothetical surf-tourism coalition. WSL is an empirical reference and possible coalition member, not a required formal representative.
 
 ## Game-Theory Background
 
