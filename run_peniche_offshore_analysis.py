@@ -30,6 +30,23 @@ COLOR_MAP = {
     "Absence of Pure Equilibrium": "#FFC107",
 }
 EQ_LEVELS = list(COLOR_MAP)
+ARTICLE_LEGEND_LEVELS = [
+    "Implement / Accept",
+    "Absence of Pure Equilibrium",
+    "Implement / Fight",
+]
+
+plt.rcParams.update(
+    {
+        "font.size": 12,
+        "axes.titlesize": 14,
+        "axes.labelsize": 13,
+        "xtick.labelsize": 11,
+        "ytick.labelsize": 11,
+        "legend.fontsize": 11,
+        "legend.title_fontsize": 12,
+    }
+)
 
 PARAMS = {
     "R": 100.0,
@@ -135,18 +152,28 @@ def plot_heatmap(
 
     fig, ax = plt.subplots(figsize=(8, 6))
     ax.pcolormesh(x_values, y_values, z_int.T, cmap=cmap, norm=norm, shading="auto")
-    ax.set_title(title, fontfamily="serif", fontweight="bold")
+    # Figure identification is kept in the call title and LaTeX caption; article PNGs omit embedded titles.
     ax.set_xlabel(xlab, fontfamily="serif")
     ax.set_ylabel(ylab, fontfamily="serif")
     ax.grid(True, linestyle="--", alpha=0.35)
     handles = [
         Patch(facecolor=COLOR_MAP[eq], edgecolor="black", label=eq)
-        for eq in EQ_LEVELS
+        for eq in ARTICLE_LEGEND_LEVELS
         if eq in set(rows["equilibrium"])
     ]
-    ax.legend(handles=handles, title="Nash Equilibrium", loc="upper center", bbox_to_anchor=(0.5, -0.16), ncol=2)
-    fig.tight_layout()
-    fig.savefig(FIGURE_DIR / filename, dpi=300)
+    ax.legend(
+        handles=handles,
+        title="Nash Equilibrium",
+        loc="upper center",
+        bbox_to_anchor=(0.5, -0.16),
+        ncol=3,
+        frameon=True,
+        columnspacing=1.3,
+        handletextpad=0.5,
+        borderaxespad=0.8,
+    )
+    fig.tight_layout(rect=(0, 0.04, 1, 1))
+    fig.savefig(FIGURE_DIR / filename, dpi=300, bbox_inches="tight")
     plt.close(fig)
 
 
@@ -164,14 +191,28 @@ def plot_area(rows: pd.DataFrame, title: str, xlab: str, filename: str) -> None:
                 markersize=5,
                 label=eq,
             )
-    ax.set_title(title, fontfamily="serif", fontweight="bold")
+    # Figure identification is kept in the call title and LaTeX caption; article PNGs omit embedded titles.
     ax.set_xlabel(xlab, fontfamily="serif")
     ax.set_ylabel("Area in the P vs G scenario grid (%)", fontfamily="serif")
     ax.set_ylim(-5, 105)
     ax.grid(True, linestyle="--", alpha=0.6)
-    ax.legend(title="Nash Equilibrium", loc="upper center", bbox_to_anchor=(0.5, -0.16), ncol=2)
-    fig.tight_layout()
-    fig.savefig(FIGURE_DIR / filename, dpi=300)
+    handles, labels = ax.get_legend_handles_labels()
+    legend_by_label = dict(zip(labels, handles))
+    ordered_labels = [eq for eq in ARTICLE_LEGEND_LEVELS if eq in legend_by_label]
+    ax.legend(
+        [legend_by_label[label] for label in ordered_labels],
+        ordered_labels,
+        title="Nash Equilibrium",
+        loc="upper center",
+        bbox_to_anchor=(0.5, -0.16),
+        ncol=3,
+        frameon=True,
+        columnspacing=1.3,
+        handletextpad=0.5,
+        borderaxespad=0.8,
+    )
+    fig.tight_layout(rect=(0, 0.04, 1, 1))
+    fig.savefig(FIGURE_DIR / filename, dpi=300, bbox_inches="tight")
     plt.close(fig)
 
 
@@ -256,6 +297,7 @@ def write_article_figures() -> None:
 
     pxg_rows, pxg_z = grid_equilibria(low, "G", g_values_low, "P", p_values)
     pxg_rows.to_csv(TRACE_DIR / "figure_01_probability_compensation_low_impact.csv", index=False)
+    # Figure 1: P x G equilibrium heatmap, low-impact scenario.
     plot_heatmap(
         pxg_rows,
         pxg_z,
@@ -280,6 +322,7 @@ def write_article_figures() -> None:
         )
         area["variation_percent"] = np.repeat(ca_variations, len(EQ_LEVELS))
         area.to_csv(TRACE_DIR / f"stakeholder_cost_area_{slug}.csv", index=False)
+        # Figures 2-4: P x G x Ca area evolution by impact scenario.
         plot_area(
             area.assign(value=area["variation_percent"]),
             f"Evolution of Equilibrium Areas by Stakeholder Cost - {slug.replace('_', ' ').title()}",
@@ -297,6 +340,7 @@ def write_article_figures() -> None:
         y_values=np.linspace(0, 1.5 * 0.9 * PARAMS["I"], 100),
     )
     l_area.to_csv(TRACE_DIR / "expected_local_loss_area.csv", index=False)
+    # Figure 5: P x G x L area evolution.
     plot_area(l_area, "Evolution of Equilibrium Areas by Expected Local Loss", "Expected Local Loss L", "expected_local_loss_area.png")
     copy_article_figure("expected_local_loss_area.png", "grafico5.png")
 
@@ -308,6 +352,7 @@ def write_article_figures() -> None:
         np.linspace(0, 0.9 * PARAMS["I"], 100),
     )
     gl_rows.to_csv(TRACE_DIR / "compensation_loss_heatmap.csv", index=False)
+    # Figure 6: G x L equilibrium heatmap.
     plot_heatmap(
         gl_rows,
         gl_z,
@@ -327,6 +372,7 @@ def write_article_figures() -> None:
         y_values=np.linspace(0, 1.5 * low["L"], 100),
     )
     lr_area.to_csv(TRACE_DIR / "delay_cost_area_low_impact.csv", index=False)
+    # Figure 7: P x G x LR area evolution, low-impact scenario.
     plot_area(lr_area, "Evolution of Equilibrium Areas by Delay Cost - Low Impact", "Delay Cost LR", "delay_cost_area_low_impact.png")
     copy_article_figure("delay_cost_area_low_impact.png", "grafico7.png")
 
@@ -342,6 +388,7 @@ def write_article_figures() -> None:
             np.linspace(0, PARAMS["R"], 100),
         )
         cost_rows.to_csv(TRACE_DIR / f"stakeholder_consortium_cost_heatmap_{slug}.csv", index=False)
+        # Figures 8-9: Ca x Cs equilibrium heatmaps for low- and high-impact scenarios.
         plot_heatmap(
             cost_rows,
             cost_z,
